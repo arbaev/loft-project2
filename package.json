@@ -1,0 +1,15 @@
+{
+  "name": "timshop",
+  "version": "0.1.0",
+  "description": "Loftschool project #2",
+  "main": "gulpfile.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Arbaev",
+  "license": "ISC"
+}

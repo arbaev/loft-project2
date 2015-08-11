@@ -1,0 +1,19 @@
+{
+  "name": "timshop",
+  "version": "0.1.0",
+  "authors": [
+    "Tim Arbaev <timbrk@gmail.com>"
+  ],
+  "description": "Loftschool project #2",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
