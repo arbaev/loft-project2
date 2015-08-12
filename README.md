@@ -4,8 +4,8 @@
 
 	1. git clone %git_repository% %your_folder%
 	2. cd %your_folder%
-	3. bower -i
-	4. npm -i
+	3. bower i
+	4. npm i
 	5. gulp
 
 ### Features ###
