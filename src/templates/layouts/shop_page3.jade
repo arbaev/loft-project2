@@ -1,31 +1,33 @@
 doctype html
 html(lang='ru-RU')
 include ../common/head.jade
+include ../common/social.jade
 body
-	.header
-		.top-header
-			.social
-			.addr
-			.phone
-		.main-header
-			.logo
-			.search
-			.menu
+	.wrapper
+		.header
+			include ../common/top-header.jade
 
-	.nav
+			.main-header
+				.main-header-wrap
+					.logo logogo
+					.search input-search
+					.menu minimenu
+			.nav navigation
 
-	.content
-		.breadcrumbs
-		.prod
-			.prod-photo
-			.prod-desc
 
-		.about
+	.container
+		.content
+			.breadcrumbs
+			.prod
+				.prod-photo
+				.prod-desc
 
-	.footer
-		.logo-footer
-		.quicklinks
-		.social-footer
+			.about
+
+		.footer
+			.logo-footer
+			.quicklinks
+			.social-footer
 
 
 

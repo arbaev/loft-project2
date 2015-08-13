@@ -1,5 +1,6 @@
 var gulp = require("gulp"),
     jade = require('gulp-jade'),
+    sass = require('gulp-sass'),
     prettify = require('gulp-prettify'),
     wiredep = require('wiredep').stream,
     useref = require('gulp-useref'),
@@ -13,8 +14,8 @@ var gulp = require("gulp"),
     minifyCss = require('gulp-minify-css'),
     browserSync = require('browser-sync'),
     gutil = require('gulp-util'),
-    // ftp = require('vinyl-ftp'),
     reload = browserSync.reload;
+    // ftp = require('vinyl-ftp'),
 
 // ====================================================
 // ====================================================
@@ -31,8 +32,15 @@ gulp.task('jade', function() {
     .pipe(reload({stream: true}));
 });
 
-// Запускаем локальный сервер (только после компиляции jade)
-gulp.task('server', ['jade'], function () {
+// Компилируем sass в css
+gulp.task('sass', function () {
+  gulp.src('src/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('src/css'));
+});
+
+// Запускаем локальный сервер (только после компиляции jade&sass)
+gulp.task('server', ['jade','sass'], function () {
   browserSync({
     notify: true,
     port: 9000,
@@ -54,6 +62,7 @@ gulp.task('wiredep', function () {
 // слежка и запуск задач
 gulp.task('watch', function () {
   gulp.watch('src/templates/**/*.jade', ['jade']);
+  gulp.watch('src/sass/**/*.scss', ['sass']);
   gulp.watch('bower.json', ['wiredep']);
   gulp.watch([
     'src/js/**/*.js',

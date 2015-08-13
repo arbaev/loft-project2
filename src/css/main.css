@@ -1,0 +1,113 @@
+/* Colors Guide */
+/* text, top-header bg */
+/* header */
+/* header bg */
+/* nav bg */
+/* link, nav active bg, title */
+/* link, nav active bg, title */
+/* odd rows in spec bg */
+/* footer bg */
+/* Blocks Guide */
+body {
+  font-family: ElektraLightPro; }
+
+.ch {
+  border: 2px solid red;
+  background: #0dd; }
+
+.top-header {
+  background: #46636f;
+  color: #fff; }
+
+.top-header-wrap {
+  width: 1000px;
+  line-height: 38px;
+  height: 38px;
+  margin: 0 auto; }
+
+.social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 200px; }
+
+.social_scale {
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -o-transform: scale(0.6); }
+
+.social__item {
+  display: inline-block;
+  max-width: 100%; }
+
+.social__link {
+  background-image: url(../img/social.png);
+  background-repeat: no-repeat;
+  display: block;
+  width: 44px;
+  height: 44px;
+  text-indent: -9999px; }
+
+.social__link_fb {
+  background-position: -5px -5px; }
+
+.social__link_tw {
+  background-position: -59px -5px; }
+
+.social__link_vk {
+  background-position: -113px -5px; }
+
+.phone {
+  float: right;
+  color: #fff;
+  text-align: right;
+  padding-top: 5px;
+  width: 300px; }
+
+.phone_kod {
+  color: #00b9fe;
+  vertical-align: super; }
+
+.phone_num {
+  font-size: 1.6em; }
+
+.addr {
+  float: left;
+  background: url(../img/map-point.png) no-repeat 0 5px;
+  padding-left: 20px;
+  line-height: 38px;
+  display: inline-block; }
+
+.main-header {
+  height: 100px;
+  background: #e8eef5; }
+
+/* ==========================================================================
+   Micro clearfix hack by Nicolas Gallagher
+   ========================================================================== */
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
