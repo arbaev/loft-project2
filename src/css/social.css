@@ -2,8 +2,9 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  float: left;
-  width: 200px; }
+  width: 200px;
+  display: table-cell;
+  vertical-align: middle; }
 
 .social_scale {
   -webkit-transform: scale(0.6);

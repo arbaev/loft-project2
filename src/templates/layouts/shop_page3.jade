@@ -1,33 +1,34 @@
 doctype html
 html(lang='ru-RU')
+include config.jade
 include ../common/head.jade
 include ../common/social.jade
 body
 	.wrapper
 		.header
 			include ../common/top-header.jade
+			include ../common/main-header.jade
+			include ../common/navigation.jade
 
-			.main-header
-				.main-header-wrap
-					.logo logogo
-					.search input-search
-					.menu minimenu
-			.nav navigation
+		.container
+			.content
+				.breadcrumbs
+					ul.breadcrumbs__list
+						each item in ['главная','малоглавная','слабоглавная']
+							li.breadcrumbs__item
+								a.breadcrumbs__link
+									span.breadcrumbs__text= item
 
+				.prod
+					.prod-photo
+					.prod-desc
 
-	.container
-		.content
-			.breadcrumbs
-			.prod
-				.prod-photo
-				.prod-desc
+				.about
 
-			.about
-
-		.footer
-			.logo-footer
-			.quicklinks
-			.social-footer
+			.footer
+				.logo-footer
+				.quicklinks
+				.social-footer
 
 
 

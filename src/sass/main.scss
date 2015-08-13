@@ -12,6 +12,11 @@ $bg_footer: #613993; /* footer bg */
 $top-header-height: 38px;
 
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 body {
 	font-family: ElektraLightPro;
 }
@@ -30,19 +35,23 @@ body {
 .top-header-wrap {
 	width: 1000px;
 	// height: 38px;
-	line-height: $top-header-height;
+	// line-height: $top-header-height;
 	height: $top-header-height;
 	margin: 0 auto;
+	text-align: center;
+	display: table;
 }
 
 @import "social.scss"; // кнопки соцсетей
+@import "main-header.scss";
 
 .phone {
-	float: right;
+	// float: right;
 	color: $c_header;
 	text-align: right;
-	padding-top: 5px;
 	width: 300px;
+		display: table-cell;
+	vertical-align: middle;
 }
 .phone_kod {
 	color: $c_active;
@@ -51,14 +60,25 @@ body {
 .phone_num {
 	font-size: 1.6em;
 }
-.addr {
-	float: left;
-	background: url(../img/map-point.png) no-repeat 0 5px;
-    padding-left: 20px;
-    line-height: 38px;
-    display: inline-block;
-}
 
+// .top-header-wrap:before {
+// 	content: '';
+// 	display: inline-block;
+// 	height: 100%;
+// 	vertical-align: middle;
+// }
+.addr {
+	// background: url(../img/map-point.png) no-repeat center;
+	// padding-left: 20px;
+	// line-height: 38px;
+	display: table-cell;
+	vertical-align: middle;
+	// margin-top: 4px
+}
+.icon {
+	background: url(../img/map-point.png) no-repeat center;
+
+}
 
 .main-header {
 	height: 100px;
@@ -71,8 +91,8 @@ body {
 
 
 /* ==========================================================================
-   Micro clearfix hack by Nicolas Gallagher
-   ========================================================================== */
+	 Micro clearfix hack by Nicolas Gallagher
+	 ========================================================================== */
 /**
  * For modern browsers
  * 1. The space content is one way to avoid an Opera bug when the

@@ -1,0 +1,28 @@
+.main-header {
+  position: relative; }
+
+.main-header-row {
+  position: relative;
+  min-height: 1px;
+  width: 1000px;
+  margin: 0 auto; }
+
+.logo-link {
+  font-size: 0;
+  display: inline-block;
+  /*text-indent: -99999px;*/
+  overflow: hidden;
+  vertical-align: middle;
+  text-align: left; }
+
+.logo-img {
+  max-width: 100%;
+  vertical-align: middle; }
+
+.search {
+  width: 37%;
+  float: left; }
+
+.menu {
+  width: 37%;
+  float: left; }

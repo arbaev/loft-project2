@@ -1,11 +1,14 @@
+// top-header start
 .top-header.cf
 	.top-header-wrap
-		// кнопки соцсетей start
+		//- блок кнопок соцсетей с уменьшением
 		+social(class="social_scale")
-		// кнопки соцсетей end
 
-		span.addr kjhkjhkjh #{address}
+		span.addr
+			block addr
+				| #{address}
 
-		//- .phone
-		//- 	span.phone_kod +7 (921)
-		//- 	span.phone_num &nbsp;321-12-12
+		.phone
+			span.phone_kod +7 (921)
+			span.phone_num &nbsp;321-12-12
+// top-header end
