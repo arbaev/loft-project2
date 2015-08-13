@@ -1,0 +1,60 @@
+/*прибитый футер */
+.wrapper {
+  position: relative;
+  height: auto;
+  min-height: 100%;
+  min-width: 1010px;
+
+    &:after {
+    content: "";
+    height: $footer-height;
+    display: block;
+  }
+}
+.footer {
+    background: $bg_footer;
+    height: $footer-height;
+    margin-top: -$footer-height;
+    min-width: 1000px;
+    position: relative;
+    clear: both;
+}
+/*прибитый футер end */
+
+.footer__container {
+    max-width: 1001px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 30px;
+    color: $c_header;
+}
+
+.footer__logo {
+  display: inline-block;
+  width: 220px;
+}
+.footer__nav {
+  display: inline-block;
+  width: 500px;
+
+}
+.footer__socials {
+  display: inline-block;
+  width: 260px;
+}
+
+.footer__nav-menu {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+}
+
+.footer__logo-img {
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+.footer__logo-text {
+  text-indent: -9999px;
+  font-size: 0;
+}

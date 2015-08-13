@@ -10,22 +10,22 @@ $bg_footer: #613993; /* footer bg */
 
 /* Blocks Guide */
 $top-header-height: 38px;
+$footer-height: 226px;
 
-
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+html {
+	height: 100%;
 }
 body {
+	height: 100%;
 	font-family: ElektraLightPro;
 }
 .ch {
 	border: 2px solid red;
 	background: #0dd;
 }
-.wrapper {}
 
+.content {
+}
 .header {
 }
 .top-header {
@@ -44,6 +44,7 @@ body {
 
 @import "_social.scss"; // кнопки соцсетей
 @import "_main-header.scss";
+@import "_footer.scss";
 
 .phone {
 	// float: right;
