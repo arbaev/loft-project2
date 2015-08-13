@@ -42,8 +42,8 @@ body {
 	display: table;
 }
 
-@import "social.scss"; // кнопки соцсетей
-@import "main-header.scss";
+@import "_social.scss"; // кнопки соцсетей
+@import "_main-header.scss";
 
 .phone {
 	// float: right;

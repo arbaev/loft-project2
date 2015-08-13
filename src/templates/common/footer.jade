@@ -1,0 +1,29 @@
+.footer
+	.container
+		.footer__logo
+			img.footer__logo_img
+			span.footer__logo_text
+		.footer__nav
+			.footer__nav-title О магазине
+			ul.footer__nav-list
+				each item in ['О нас','Гарантия','Доставка','Акции']
+					li.footer__nav-item
+						a.footer__nav-link= item
+
+			.footer__nav-title Каталог
+			ul.footer__nav-list
+				each item in menu
+					li.footer__nav-item
+						a.footer__nav-link= item
+
+			.footer__nav-title Контакты
+			ul.footer__nav-list
+				each item in ['Телефоны','Адрес магазинов','Карта проезда','Обратная связь']
+					li.footer__nav-item
+						a.footer__nav-link= item
+
+		.footer__socials
+			.footer__apps
+				a.footer__apps-link play
+				a.footer__apps-link appstore
+			+social
