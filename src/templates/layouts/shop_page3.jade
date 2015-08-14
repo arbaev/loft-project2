@@ -2,13 +2,16 @@ doctype html
 html(lang='ru-RU')
 include config.jade
 include ../common/head.jade
-include ../common/social.jade
+include ../common/_mixins.jade
 body
 	.wrapper
 		.header
 			include ../common/top-header.jade
 			include ../common/main-header.jade
-			include ../common/navigation.jade
+
+			//- навигация с 4 активным элементом
+			+nav('navigation', menu, 4)
+
 
 		.container
 			.content

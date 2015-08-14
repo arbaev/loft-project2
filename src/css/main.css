@@ -8,13 +8,15 @@
 /* link, nav active bg, title */
 /* odd rows in spec bg */
 /* footer bg */
+/* menu hover bg */
 /* Blocks Guide */
 html {
   height: 100%; }
 
 body {
   height: 100%;
-  font-family: ElektraLightPro; }
+  font-family: ElektraLightPro;
+  color: #46636f; }
 
 .ch {
   border: 2px solid red;
@@ -162,6 +164,67 @@ body {
   display: block;
   float: left;
   padding-right: 6px; }
+
+.navigation {
+  background: #f7f7f7; }
+
+.navigation__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative; }
+
+.navigation__link {
+  padding: 10px 0;
+  color: #46636f;
+  text-decoration: none;
+  line-height: 40px; }
+
+.navigation__item {
+  text-decoration: none;
+  outline: none;
+  display: block;
+  float: left;
+  padding: 0 10px 0 40px;
+  position: relative;
+  transition: all 0.5s; }
+
+.navigation__item:first-child:before {
+  left: 14px; }
+
+.navigation__item:last-child {
+  padding-right: 20px; }
+
+.navigation__item.active,
+.navigation__item:hover,
+.navigation__item.active:after,
+.navigation__item:hover:after {
+  background: #dce6f0; }
+
+.navigation__item.current,
+.navigation__item.current:after,
+.navigation__item.current .navigation__link {
+  background: #00b9fe;
+  color: #fff; }
+
+.navigation__item:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -20px;
+  /* half of square's length */
+  width: 40px;
+  height: 40px;
+  transform: scale(0.707) rotate(45deg);
+  z-index: 1;
+  background: #f7f7f7;
+  transition: all 0.5s;
+  box-shadow: 1px -1px 0 0px rgba(0, 0, 0, 0.4), 3px -3px 0 2px rgba(255, 255, 255, 0.1);
+  border-radius: 0 5px 0 50px; }
+
+.navigation__item:last-child:after {
+  content: none; }
 
 /*прибитый футер */
 .wrapper {

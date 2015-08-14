@@ -1,0 +1,90 @@
+// высота блока меню
+$m_height: 40px;
+
+.navigation {
+	background: $bg_nav;
+}
+
+.navigation__list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+}
+.navigation__link {
+	padding: 10px 0;
+	color: $c_text;
+	text-decoration: none;
+	line-height: $m_height;
+}
+.navigation__item {
+	text-decoration: none;
+	outline: none;
+	display: block;
+	float: left;
+	// need more margin on the left of links to accomodate the numbers
+	padding: 0 10px 0 40px;
+	// background: #666;
+	// background: linear-gradient(#666, #333);
+	position: relative;
+	transition: all 0.5s;
+}
+// since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links
+.navigation__item:first-child {}
+
+.navigation__item:first-child:before {
+	left: 14px;
+}
+.navigation__item:last-child {
+	padding-right: 20px;
+}
+
+// hover/active styles
+.navigation__item.active,
+.navigation__item:hover,
+.navigation__item.active:after,
+.navigation__item:hover:after {
+	background: $m_hover;
+}
+
+// current styles
+.navigation__item.current,
+.navigation__item.current:after,
+.navigation__item.current .navigation__link {
+	background: $c_active;
+	color: $c_header;
+}
+
+// adding the arrows for the breadcrumbs using rotated pseudo elements
+.navigation__item:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -$m_height/2; /* half of square's length */
+	// same dimension as the line-height of .navigation__item
+	width: $m_height;
+	height: $m_height;
+	// as you see the rotated square takes a larger height. which makes it tough to position it properly. So we are going to scale it down so that the diagonals become equal to the line-height of the link. We scale it to 70.7% because if square's:
+	// length = 1; diagonal = (1^2 + 1^2)^0.5 = 1.414 (pythagoras theorem)
+	// if diagonal required = 1; length = 1/1.414 = 0.707
+	transform: scale(0.707) rotate(45deg);
+	// we need to prevent the arrows from getting buried under the next link
+	z-index: 1;
+	// background same as links but the gradient will be rotated to compensate with the transform applied
+	background: $bg_nav;
+	transition: all 0.5s;
+	// stylish arrow design using box shadow
+	box-shadow:
+		1px -1px 0 0px rgba(0, 0, 0, 0.4),
+		3px -3px 0 2px rgba(255, 255, 255, 0.1);
+	// 5px - for rounded arrows and
+	// 	50px - to prevent hover glitches on the border created using shadows
+	border-radius: 0 5px 0 50px;
+}
+
+// we dont need an arrow after the last link
+.navigation__item:last-child:after {
+	content: none;
+}
+

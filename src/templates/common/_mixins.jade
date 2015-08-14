@@ -1,0 +1,19 @@
+//- миксин кнопок соцсетей
+mixin social(attributes)
+	// кнопки соцсетей start
+	ul.social&attributes(attributes)
+		li.social__item: a.social__link.social__link_vk(href="#VK" title="VK") VK
+		li.social__item: a.social__link.social__link_fb(href="#FB" title="FB") FB
+		li.social__item: a.social__link.social__link_tw(href="#TW" title="TW") TW
+	// кнопки соцсетей end
+
+mixin nav(className, items, activeIndex)
+	// меню навигации start
+	div(class=className)
+		.container
+			ul(class=className + '__list')
+				each item, ndx in items
+					li(class=className + '__item' + ((ndx == activeIndex) ? ' current' : ''))
+						a(class=className + '__link', href="#")= item
+	// меню навигации end
+

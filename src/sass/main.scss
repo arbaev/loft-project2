@@ -7,6 +7,7 @@ $c_link: #00b9fe; /* link, nav active bg, title */
 $c_active: #00b9fe; /* link, nav active bg, title */
 $bg_odd: #eef2f4; /* odd rows in spec bg */
 $bg_footer: #613993; /* footer bg */
+$m_hover: #dce6f0; /* menu hover bg */
 
 /* Blocks Guide */
 $top-header-height: 38px;
@@ -18,6 +19,7 @@ html {
 body {
 	height: 100%;
 	font-family: ElektraLightPro;
+	color: $c_text;
 }
 .ch {
 	border: 2px solid red;
@@ -36,6 +38,7 @@ body {
 @import "_social.scss"; // кнопки соцсетей
 @import "_top-header.scss";
 @import "_main-header.scss";
+@import "_navigation.scss";
 @import "_footer.scss";
 
 
