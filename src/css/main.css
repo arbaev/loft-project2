@@ -20,22 +20,15 @@ body {
   border: 2px solid red;
   background: #0dd; }
 
-.top-header {
-  background: #46636f;
-  color: #fff; }
-
-.top-header-wrap {
-  width: 1000px;
-  height: 38px;
-  margin: 0 auto;
-  text-align: center;
-  display: table; }
+.container {
+  max-width: 1001px;
+  position: relative;
+  margin: 0 auto; }
 
 .social {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 200px;
   display: table-cell;
   vertical-align: middle; }
 
@@ -65,6 +58,46 @@ body {
 .social__link_vk {
   background-position: -113px -5px; }
 
+.topheader {
+  background: #46636f;
+  color: #fff; }
+
+.topheader-wrap {
+  width: 1000px;
+  margin: 0 auto;
+  display: table; }
+
+.addr-wrap {
+  text-align: center;
+  margin-top: 10px; }
+
+.addr {
+  display: inline-block;
+  line-height: 1.5; }
+  .addr:before {
+    background: url(../img/map-point.png) no-repeat;
+    width: 16px;
+    height: 22px;
+    content: "";
+    display: block;
+    float: left;
+    padding-right: 6px; }
+
+.phone {
+  color: #fff;
+  text-align: right;
+  display: table-cell;
+  vertical-align: middle; }
+
+.phone__kod {
+  color: #00b9fe;
+  vertical-align: super; }
+
+.phone__num {
+  font-size: 1.6em; }
+  .phone__num:before {
+    content: ' '; }
+
 /*прибитый футер */
 .wrapper {
   position: relative;
@@ -77,67 +110,68 @@ body {
     display: block; }
 
 .footer {
-  background: #613993;
+  background: #613993 url(../img/footer-bg.png) repeat;
   height: 226px;
   margin-top: -226px;
   min-width: 1000px;
   position: relative;
-  clear: both; }
+  clear: both;
+  color: #fff;
+  padding-top: 30px;
+  font-size: 0.8em; }
 
 /*прибитый футер end */
-.footer__container {
-  max-width: 1001px;
-  position: relative;
-  margin: 0 auto;
-  padding-top: 30px;
-  color: #fff; }
-
 .footer__logo {
-  display: inline-block;
-  width: 220px; }
+  float: left;
+  width: 260px; }
 
 .footer__nav {
-  display: inline-block;
-  width: 500px; }
+  float: left; }
 
 .footer__socials {
-  display: inline-block;
-  width: 260px; }
+  position: absolute;
+  right: 0; }
 
 .footer__nav-menu {
   display: inline-block;
   width: 30%;
-  vertical-align: top; }
+  vertical-align: top;
+  padding-right: 10px; }
 
 .footer__logo-img {
   position: absolute;
   left: 0;
-  top: 100px; }
+  top: 60px; }
 
 .footer__logo-text {
   text-indent: -9999px;
   font-size: 0; }
 
-.phone {
+.footer__nav-title {
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 5px; }
+
+.footer__nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4; }
+
+.footer__nav-item {
+  padding-bottom: 5px; }
+
+.footer__nav-link {
   color: #fff;
-  text-align: right;
-  width: 300px;
-  display: table-cell;
-  vertical-align: middle; }
+  text-decoration: underline; }
 
-.phone_kod {
-  color: #00b9fe;
-  vertical-align: super; }
+.footer__apps-link {
+  padding-right: 10px;
+  padding-bottom: 10px;
+  display: inline-block; }
 
-.phone_num {
-  font-size: 1.6em; }
-
-.addr {
-  display: table-cell;
-  vertical-align: middle; }
-
-.icon {
-  background: url(../img/map-point.png) no-repeat center; }
+.footer__apps {
+  padding-left: 3px; }
 
 .main-header {
   height: 100px;

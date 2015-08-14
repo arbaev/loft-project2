@@ -1,60 +1,82 @@
 /*прибитый футер */
 .wrapper {
-  position: relative;
-  height: auto;
-  min-height: 100%;
-  min-width: 1010px;
+	position: relative;
+	height: auto;
+	min-height: 100%;
+	min-width: 1010px;
 
-    &:after {
-    content: "";
-    height: $footer-height;
-    display: block;
-  }
+	&:after {
+		content: "";
+		height: $footer-height;
+		display: block;
+	}
 }
 .footer {
-    background: $bg_footer;
-    height: $footer-height;
-    margin-top: -$footer-height;
-    min-width: 1000px;
-    position: relative;
-    clear: both;
+	background: $bg_footer url(../img/footer-bg.png) repeat;
+	height: $footer-height;
+	margin-top: -$footer-height;
+	min-width: 1000px;
+	position: relative;
+	clear: both;
+	color: $c_header;
+	padding-top: 30px;
+	font-size: 0.8em;
 }
 /*прибитый футер end */
 
-.footer__container {
-    max-width: 1001px;
-    position: relative;
-    margin: 0 auto;
-    padding-top: 30px;
-    color: $c_header;
+.footer__row {
 }
-
 .footer__logo {
-  display: inline-block;
-  width: 220px;
+	float: left;
+	width: 260px;
 }
 .footer__nav {
-  display: inline-block;
-  width: 500px;
-
+	float: left;
 }
 .footer__socials {
-  display: inline-block;
-  width: 260px;
+	position: absolute;
+	right: 0;
 }
 
 .footer__nav-menu {
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
+	display: inline-block;;
+	width: 30%;
+	vertical-align: top;
+	padding-right: 10px;
 }
 
 .footer__logo-img {
-  position: absolute;
-  left: 0;
-  top: 100px;
+	position: absolute;
+	left: 0;
+	top: 60px;
 }
 .footer__logo-text {
-  text-indent: -9999px;
-  font-size: 0;
+	text-indent: -9999px;
+	font-size: 0;
+}
+.footer__nav-title {
+	font-weight: bold;
+	margin: 0;
+	padding-bottom: 5px;
+}
+.footer__nav-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1.4;
+}
+.footer__nav-item {
+	padding-bottom: 5px;
+}
+.footer__nav-link {
+	color: $c_header;
+	text-decoration: underline;
+}
+.footer__apps-link {
+	padding-right: 10px;
+	padding-bottom: 10px;
+	display: inline-block
+}
+.footer__apps {
+	padding-left: 3px;
 }

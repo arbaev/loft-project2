@@ -1,0 +1,43 @@
+.topheader {
+	background: $c_text;
+	color: $c_header;
+}
+.topheader-wrap {
+	width: 1000px;
+	margin: 0 auto;
+	display: table;
+}
+.addr-wrap {
+	text-align: center;
+	margin-top: 10px;
+}
+.addr {
+	display: inline-block;
+	line-height: 1.5;
+
+	&:before {
+		background: url(../img/map-point.png) no-repeat;
+		width: 16px;
+		height: 22px;
+		content: "";
+		display: block;
+		float: left;
+		padding-right: 6px;
+	}
+}
+.phone {
+	color: $c_header;
+	text-align: right;
+	display: table-cell;
+	vertical-align: middle;
+}
+.phone__kod {
+	color: $c_active;
+	vertical-align: super;
+}
+.phone__num {
+	font-size: 1.6em;
+	&:before {
+		content: ' ';
+	}
+}

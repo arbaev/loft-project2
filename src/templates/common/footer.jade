@@ -1,34 +1,35 @@
 .footer
-	.footer__container
-		.footer__logo
-			img.footer__logo-img(src="../img/logo-white.png" alt="logo")
-			span.footer__logo-text Abble Shop
-		.footer__nav
-			.footer__nav-menu
-				.footer__nav-title О магазине
-				ul.footer__nav-list
-					each item in ['О нас','Гарантия','Доставка','Акции']
-						li.footer__nav-item
-							a.footer__nav-link= item
+	.container
+		.footer__row
+			.footer__logo
+				img.footer__logo-img(src="../img/logo-white.png" alt="logo")
+				span.footer__logo-text Abble Shop
+			.footer__nav.cf
+				.footer__nav-menu
+					h3.footer__nav-title О магазине
+					ul.footer__nav-list
+						each item in ['О нас','Гарантия','Доставка','Акции']
+							li.footer__nav-item
+								a.footer__nav-link(href="#")= item
 
-			.footer__nav-menu
-				.footer__nav-title Каталог
-				ul.footer__nav-list
-					each item in menu
-						li.footer__nav-item
-							a.footer__nav-link= item
+				.footer__nav-menu
+					h3.footer__nav-title Каталог
+					ul.footer__nav-list
+						each item in menu
+							li.footer__nav-item
+								a.footer__nav-link(href="#")= item
 
-			.footer__nav-menu
-				.footer__nav-title Контакты
-				ul.footer__nav-list
-					each item in ['Телефоны','Адрес магазинов','Карта проезда','Обратная связь']
-						li.footer__nav-item
-							a.footer__nav-link= item
+				.footer__nav-menu
+					h3.footer__nav-title Контакты
+					ul.footer__nav-list
+						each item in ['Телефоны','Адреса','Карта проезда','Обратная связь']
+							li.footer__nav-item
+								a.footer__nav-link(href="#")= item
 
-		.footer__socials
-			.footer__apps
-				a.footer__apps-link
-					img.footer__apps-img(src="../img/i-googleplay.png", alt="google play")
-				a.footer__apps-link
-					img.footer__apps-img(src="../img/i-appstore.png", alt="appstore")
-			+social
+			.footer__socials
+				.footer__apps
+					a.footer__apps-link(href="#")
+						img.footer__apps-img(src="../img/i-googleplay.png", alt="google play")
+					a.footer__apps-link(href="#")
+						img.footer__apps-img(src="../img/i-appstore.png", alt="appstore")
+				+social

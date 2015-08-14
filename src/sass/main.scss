@@ -23,63 +23,21 @@ body {
 	border: 2px solid red;
 	background: #0dd;
 }
-
+.container {
+	max-width: 1001px;
+	position: relative;
+	margin: 0 auto;
+}
 .content {
 }
 .header {
 }
-.top-header {
-	background: $c_text;
-	color: $c_header;
-}
-.top-header-wrap {
-	width: 1000px;
-	// height: 38px;
-	// line-height: $top-header-height;
-	height: $top-header-height;
-	margin: 0 auto;
-	text-align: center;
-	display: table;
-}
 
 @import "_social.scss"; // кнопки соцсетей
+@import "_top-header.scss";
 @import "_main-header.scss";
 @import "_footer.scss";
 
-.phone {
-	// float: right;
-	color: $c_header;
-	text-align: right;
-	width: 300px;
-		display: table-cell;
-	vertical-align: middle;
-}
-.phone_kod {
-	color: $c_active;
-	vertical-align: super;
-}
-.phone_num {
-	font-size: 1.6em;
-}
-
-// .top-header-wrap:before {
-// 	content: '';
-// 	display: inline-block;
-// 	height: 100%;
-// 	vertical-align: middle;
-// }
-.addr {
-	// background: url(../img/map-point.png) no-repeat center;
-	// padding-left: 20px;
-	// line-height: 38px;
-	display: table-cell;
-	vertical-align: middle;
-	// margin-top: 4px
-}
-.icon {
-	background: url(../img/map-point.png) no-repeat center;
-
-}
 
 .main-header {
 	height: 100px;
