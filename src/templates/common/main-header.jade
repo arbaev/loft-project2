@@ -1,11 +1,14 @@
-.header
-	.header-container
+.main-header
+	.container
 		.header__logo
-			a.header__logo-link(href="#" title="Abble Shop")
+			a.header__logo-link(href="/" title="Abble Shop")
 				span.header__logo-text Abble Shop
-				img.header__logo-img(alt="")
+				img.header__logo-img(src="../img/logo.png" alt="")
 
 		.header__search
+			form.search__form(action="#" id="search")
+				input.search__form-input(type="text" name="search" placeholder="Поиск товаров")
+				button.search__form-btn(type="submit" value="Найти") Найти
 
 		ul.header__links
 			li.header__links-item: a.header__links-link(href="#" title="") Карта проезда

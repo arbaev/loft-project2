@@ -39,16 +39,20 @@ body {
 @import "_footer.scss";
 
 
-.main-header {
-	height: 100px;
-	background: $bg_header;
-}
-.logo {}
-.search {}
-.menu {}
 .nav {}
 
-
+.about__text {
+	column-count: 3;
+	column-gap: 2em;
+	column-rule: 1px dotted #ccc;
+	-moz-column-count: 3;
+	-moz-column-gap: 2em;
+	-moz-column-rule: 1px dotted #ccc;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 2em;
+	-webkit-column-rule: 1px dotted #ccc;
+	text-align:justify;
+}
 /* ==========================================================================
 	 Micro clearfix hack by Nicolas Gallagher
 	 ========================================================================== */
