@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Colors Guide */
-/* text, top-header bg */
+/* top-header bg */
+/* text */
 /* header */
 /* header bg */
 /* nav bg */
@@ -16,7 +17,13 @@ html {
 body {
   height: 100%;
   font-family: ElektraLightPro;
-  color: #46636f; }
+  color: #5c7b98; }
+
+a {
+  color: #00b9fe; }
+  a:hover,
+  a:active {
+    text-decoration: none; }
 
 .ch {
   border: 2px solid red;
@@ -177,7 +184,7 @@ body {
 
 .navigation__link {
   padding: 10px 0;
-  color: #46636f;
+  color: #5c7b98;
   text-decoration: none;
   line-height: 40px; }
 
@@ -188,7 +195,7 @@ body {
   float: left;
   padding: 0 10px 0 40px;
   position: relative;
-  transition: all 0.5s; }
+  transition: all 0.3s; }
 
 .navigation__item:first-child:before {
   left: 14px; }
@@ -219,12 +226,35 @@ body {
   transform: scale(0.707) rotate(45deg);
   z-index: 1;
   background: #f7f7f7;
-  transition: all 0.5s;
+  transition: all 0.3s;
   box-shadow: 1px -1px 0 0px rgba(0, 0, 0, 0.4), 3px -3px 0 2px rgba(255, 255, 255, 0.1);
   border-radius: 0 5px 0 50px; }
 
 .navigation__item:last-child:after {
   content: none; }
+
+.breadcrumbs {
+  padding: 20px 0; }
+
+.breadcrumbs__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.breadcrumbs__item {
+  display: inline-block; }
+  .breadcrumbs__item:after {
+    content: ' >';
+    font-size: smaller; }
+  .breadcrumbs__item:last-child:after {
+    content: ''; }
+
+.breadcrumbs__link {
+  display: inline-block; }
+
+.breadcrumbs__item.current {
+  color: #5c7b98;
+  text-decoration: none; }
 
 /*прибитый футер */
 .wrapper {
@@ -245,10 +275,12 @@ body {
   position: relative;
   clear: both;
   color: #fff;
-  padding-top: 30px;
   font-size: 0.8em; }
 
 /*прибитый футер end */
+.footer__row {
+  padding-top: 30px; }
+
 .footer__logo {
   float: left;
   width: 260px; }
@@ -304,14 +336,38 @@ body {
 .about__text {
   column-count: 3;
   column-gap: 2em;
-  column-rule: 1px dotted #ccc;
   -moz-column-count: 3;
   -moz-column-gap: 2em;
-  -moz-column-rule: 1px dotted #ccc;
   -webkit-column-count: 3;
   -webkit-column-gap: 2em;
-  -webkit-column-rule: 1px dotted #ccc;
-  text-align: justify; }
+  text-align: justify;
+  padding-bottom: 40px; }
+
+.prod__title {
+  font-size: 2em;
+  color: #00b9fe;
+  margin: 0;
+  padding: 0 0 15px 0; }
+
+.prod__spec {
+  border-collapse: collapse;
+  width: 80%; }
+
+.prod__spec-cell {
+  width: 50%;
+  padding: 5px;
+  font-weight: 700; }
+
+.prod__spec-row:nth-child(even) {
+  background: #eef2f4; }
+
+.prod__photo {
+  float: left;
+  width: 350px; }
+
+.prod__desc {
+  float: right;
+  width: 640px; }
 
 /* ==========================================================================
 	 Micro clearfix hack by Nicolas Gallagher

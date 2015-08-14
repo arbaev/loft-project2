@@ -1,11 +1,12 @@
 /* Colors Guide */
-$c_text: #46636f; /* text, top-header bg */
+$bg_tophead: #46636f; /* top-header bg */
+$c_text: #5c7b98; /* text */
 $c_header: #fff; /* header */
 $bg_header: #e8eef5; /* header bg */
 $bg_nav: #f7f7f7; /* nav bg */
 $c_link: #00b9fe; /* link, nav active bg, title */
 $c_active: #00b9fe; /* link, nav active bg, title */
-$bg_odd: #eef2f4; /* odd rows in spec bg */
+$bg_even: #eef2f4; /* odd rows in spec bg */
 $bg_footer: #613993; /* footer bg */
 $m_hover: #dce6f0; /* menu hover bg */
 
@@ -20,6 +21,14 @@ body {
 	height: 100%;
 	font-family: ElektraLightPro;
 	color: $c_text;
+}
+a {
+	color: $c_link;
+
+	&:hover,
+	&:active {
+		text-decoration: none;
+	}
 }
 .ch {
 	border: 2px solid red;
@@ -39,23 +48,46 @@ body {
 @import "_top-header.scss";
 @import "_main-header.scss";
 @import "_navigation.scss";
+@import "_breadcrumbs.scss";
 @import "_footer.scss";
-
-
-.nav {}
 
 .about__text {
 	column-count: 3;
 	column-gap: 2em;
-	column-rule: 1px dotted #ccc;
 	-moz-column-count: 3;
 	-moz-column-gap: 2em;
-	-moz-column-rule: 1px dotted #ccc;
 	-webkit-column-count: 3;
 	-webkit-column-gap: 2em;
-	-webkit-column-rule: 1px dotted #ccc;
 	text-align:justify;
+	padding-bottom: 40px;
 }
+.prod__title {
+	font-size: 2em;
+	color: $c_active;
+	margin: 0;
+	padding: 0 0 15px 0;
+}
+.prod__spec {
+	border-collapse: collapse;
+	width: 80%;
+}
+.prod__spec-cell {
+	width: 50%;
+	padding: 5px;
+	font-weight: 700;
+}
+.prod__spec-row:nth-child(even) {
+	background: $bg_even;
+}
+.prod__photo {
+	float: left;
+	width: 350px;
+}
+.prod__desc {
+	float: right;
+	width: 640px;
+}
+
 /* ==========================================================================
 	 Micro clearfix hack by Nicolas Gallagher
 	 ========================================================================== */

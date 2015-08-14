@@ -7,6 +7,7 @@ mixin social(attributes)
 		li.social__item: a.social__link.social__link_tw(href="#TW" title="TW") TW
 	// кнопки соцсетей end
 
+//- миксин меню навигации (класс, [пункты меню], номер активного элемента)
 mixin nav(className, items, activeIndex)
 	// меню навигации start
 	div(class=className)
@@ -16,4 +17,10 @@ mixin nav(className, items, activeIndex)
 					li(class=className + '__item' + ((ndx == activeIndex) ? ' current' : ''))
 						a(class=className + '__link', href="#")= item
 	// меню навигации end
+
+mixin spisok(className, items)
+	div(class=className)
+		ul(class=className + '__list')
+			each item in items
+				li(class=className + '__item')= item
 
