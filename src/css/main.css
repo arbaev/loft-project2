@@ -98,12 +98,16 @@ a {
   display: table-cell;
   vertical-align: middle; }
 
+.phone__link {
+  text-decoration: none; }
+
 .phone__kod {
   color: #00b9fe;
   vertical-align: super; }
 
 .phone__num {
-  font-size: 1.6em; }
+  font-size: 1.6em;
+  color: white; }
   .phone__num:before {
     content: ' '; }
 

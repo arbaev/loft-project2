@@ -31,12 +31,16 @@
 	display: table-cell;
 	vertical-align: middle;
 }
+.phone__link {
+	text-decoration: none;
+}
 .phone__kod {
 	color: $c_active;
 	vertical-align: super;
 }
 .phone__num {
 	font-size: 1.6em;
+	color: white;
 	&:before {
 		content: ' ';
 	}
