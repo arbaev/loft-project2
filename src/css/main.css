@@ -411,6 +411,39 @@ a {
   float: right;
   width: 640px; }
 
+.scrolltotop {
+  background: #00b9fe;
+  text-align: center;
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 250px;
+  right: 50px;
+  cursor: pointer;
+  display: none;
+  color: #fff;
+  font-weight: bold;
+  z-index: 999; }
+  .scrolltotop:before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: 40px;
+    width: 0;
+    height: 0;
+    border-bottom: 6px solid #00b9fe;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent; }
+  .scrolltotop:after {
+    content: '';
+    position: absolute;
+    top: 32px;
+    right: 40px;
+    width: 0;
+    height: 0;
+    border-bottom: 6px solid white;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent; }
+
 /* ==========================================================================
 	 Micro clearfix hack by Nicolas Gallagher
 	 ========================================================================== */

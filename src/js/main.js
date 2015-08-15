@@ -9,14 +9,26 @@ var shopModule = (function() {
 	// прослушка событий
 	var _setupListeners = function () {
 		$('.header__basket').hover(_showBasket); // показать содержимое корзины
+		$(window).scroll(_showScrollToTop); // показать кнопку скролла
+		$('.scrolltotop').click(_scrollToTop); // скроллить наверх при нажатии на кнопку скролла
 	};
 
-	// показать модальное окно добавления проекта
+	// показать содержимое корзины
 	var _showBasket = function(ev) {
-		// ev.preventDefault();
 		$('.basket').toggle();
 	};
 
+	var _showScrollToTop = function() {
+		if($(this).scrollTop() != 0) {
+				$('.scrolltotop').fadeIn();
+			} else {
+				$('.scrolltotop').fadeOut();
+			}
+		};
+
+	var	_scrollToTop = function() {
+			$('body,html').animate({scrollTop:0},400);
+	};
 
 
 	return {
