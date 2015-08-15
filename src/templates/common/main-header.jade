@@ -17,3 +17,12 @@
 		.header__basket
 			a.header__basket-link(href="#" title="") Корзина
 
+			//- +nav('basket', menu, 2)
+			.basket
+				ul.basket__list
+					- var n = 0
+					while n < 5
+						li.basket__item
+							a.basket__link(href="#")
+								img.basket__img(src="http://lorempixel.com/60/60/abstract/")
+								.basket__text= "Abble ibad 10" + n++

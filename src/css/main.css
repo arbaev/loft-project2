@@ -159,9 +159,11 @@ a {
 
 .header__basket {
   float: right;
-  padding-left: 10px;
   position: relative;
-  top: 40px; }
+  top: 7px;
+  padding: 15px 15px 15px 10px; }
+  .header__basket:hover {
+    background: white; }
 
 .header__basket-link:before {
   background: url(../img/basket.png) no-repeat;
@@ -171,6 +173,47 @@ a {
   display: block;
   float: left;
   padding-right: 6px; }
+
+.basket {
+  opacity: 1;
+  transition: all 0.2s ease-in-out 0s; }
+
+.basket__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: -131px;
+  width: 244px;
+  height: auto;
+  border: 1px solid #dce6f0; }
+
+.basket__item {
+  display: block;
+  position: relative;
+  z-index: 9;
+  border-top: 1px solid #dce6f0;
+  padding: 10px;
+  overflow: hidden;
+  background: white; }
+  .basket__item:first-child {
+    border-top: none; }
+
+.basket__link {
+  color: #7C7C7C;
+  display: block;
+  padding: 5px;
+  color: #00b9fe; }
+
+.basket__img {
+  float: left;
+  max-width: 50px;
+  margin-right: 10px;
+  vertical-align: middle; }
+
+.basket__text {
+  padding-top: 8px; }
 
 .navigation {
   background: #f7f7f7; }
