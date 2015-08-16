@@ -11,8 +11,8 @@
 // scale, применяется в top-header
 .social_scale {
 	-webkit-transform: scale(0.6);
-	-moz-transform: scale(0.6);
-	-o-transform: scale(0.6);
+			-ms-transform: scale(0.6);
+					transform: scale(0.6);
 }
 
 .social__item {

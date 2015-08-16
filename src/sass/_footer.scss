@@ -32,13 +32,11 @@
 
 .footer__logo {
 	float: left;
-	width: 200px;
+	width: 240px;
 }
 
 .footer__logo_img {
-	position: absolute;
-	left: 0;
-	top: 60px;
+	padding-top: 40px;
 }
 
 .footer__logo_text {
@@ -49,7 +47,7 @@
 .footer-nav {
 	@extend %clearfix;
 	float: left;
-	width: 50%;
+	width: 620px;
 }
 
 .footer-nav__menu {

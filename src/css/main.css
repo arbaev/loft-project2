@@ -8,8 +8,8 @@
 
 .social_scale {
   -webkit-transform: scale(0.6);
-  -moz-transform: scale(0.6);
-  -o-transform: scale(0.6); }
+  -ms-transform: scale(0.6);
+  transform: scale(0.6); }
 
 .social__item {
   display: inline-block;
@@ -393,12 +393,10 @@
 
 .footer__logo {
   float: left;
-  width: 200px; }
+  width: 240px; }
 
 .footer__logo_img {
-  position: absolute;
-  left: 0;
-  top: 60px; }
+  padding-top: 40px; }
 
 .footer__logo_text {
   text-indent: -9999px;
@@ -406,7 +404,7 @@
 
 .footer-nav {
   float: left;
-  width: 50%; }
+  width: 620px; }
 
 .footer-nav__menu {
   display: inline-block;
