@@ -1,16 +1,16 @@
-/* Colors Guide */
-$bg_tophead: #46636f; /* top-header bg */
-$c_text: #5c7b98; /* text */
-$c_header: #fff; /* header */
-$bg_header: #e8eef5; /* header bg */
-$bg_nav: #f7f7f7; /* nav bg */
-$c_link: #00b9fe; /* link, nav active bg, title */
-$c_active: #00b9fe; /* link, nav active bg, title */
-$bg_even: #eef2f4; /* odd rows in spec bg */
-$bg_footer: #613993; /* footer bg */
-$m_hover: #dce6f0; /* menu hover bg */
+// Colors Guide
+$bg_tophead: #46636f; // top-header bg
+$c_text: #5c7b98; // text
+$c_header: #fff; // header
+$bg_header: #e8eef5; // header bg
+$bg_nav: #f7f7f7; // nav bg
+$c_link: #00b9fe; // link, nav active bg, title
+$c_active: #00b9fe; // link, nav active bg, title
+$bg_even: #eef2f4; // odd rows in spec bg
+$bg_footer: #613993; // footer bg
+$m_hover: #dce6f0; // menu hover bg
 
-/* Blocks Guide */
+// Blocks Guide
 $footer-height: 226px;
 
 @import "_social.scss";

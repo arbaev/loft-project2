@@ -151,8 +151,8 @@ gulp.task('dist', ['useref', 'images', 'fonts', 'extras'], function () {
   return gulp.src('dist/**/*').pipe(size({title: 'build'}));
 });
 
-// Собираем папку DIST (только после компиляции Jade)
-gulp.task('build', ['clean', 'jade'], function () {
+// Собираем папку DIST (только после компиляции Jade и Sass)
+gulp.task('build', ['clean', 'jade', 'sass'], function () {
   gulp.start('dist');
 });
 
