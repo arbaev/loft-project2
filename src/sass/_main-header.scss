@@ -1,29 +1,35 @@
-.main-header {
+// main-header styles start
+.header {
 	height: 100px;
 	min-height: 100px;
 	background: $bg_header;
 }
+
 .header__logo {
 	float: left;
 	width: 200px;
 	position: relative;
 	top: 25px;
 }
-.header__logo-text {
+
+.header__logo_text {
 	text-indent: -9999px;
 	font-size: 0;
 }
+
 .header__search {
 	float: left;
 	position: relative;
 	top: 28px;
 	padding: 0 15px;
 }
-.search__form-input {
+
+.search__form_input {
 	width: 260px;
 	padding: 10px;
 }
-.search__form-btn {
+
+.search__form_btn {
 	width: 80px;
 	background: #00b9fe;
 	position: relative;
@@ -36,6 +42,7 @@
 	box-shadow: none;
 	border: none;
 }
+
 .header__links {
 	float: left;
 	position: relative;
@@ -44,22 +51,23 @@
 	margin: 0;
 	padding: 0;
 }
-.header__links-item {
+
+.header__links_item {
 	display: inline-block;
-	padding:0 10px;
+	padding: 0 10px;
 }
+
 .header__basket {
 	float: right;
 	position: relative;
 	top: 24px;
 	padding: 15px 15px 15px 10px;
-
 	&:hover {
 		background: white;
 	}
 }
-.header__basket-link {
 
+.header__basket_link {
 	&:before {
 		background: url(../img/basket.png) no-repeat;
 		width: 20px;
@@ -69,13 +77,13 @@
 		float: left;
 		padding-right: 6px;
 	}
-
 }
 
+// стили для всплывающей панельки корзины
 .basket {
-	// opacity: 0;
 	display: none;
 }
+
 .basket__list {
 	list-style-type: none;
 	margin: 0;
@@ -87,6 +95,7 @@
 	height: auto;
 	border: 1px solid $m_hover;
 }
+
 .basket__item {
 	display: block;
 	position: relative;
@@ -95,22 +104,29 @@
 	padding: 10px;
 	overflow: hidden;
 	background: white;
+
 	&:first-child {
 		border-top: none;
 	}
 }
+
 .basket__link {
 	color: #7C7C7C;
 	display: block;
 	padding: 5px;
 	color: $c_link;
 }
+
 .basket__img {
 	float: left;
 	max-width: 50px;
 	margin-right: 10px;
 	vertical-align: middle;
 }
+
 .basket__text {
 	padding-top: 8px;
 }
+// стили для всплывающей панельки корзины end
+
+// main-header styles end

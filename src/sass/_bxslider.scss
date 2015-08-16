@@ -1,0 +1,81 @@
+// оформление слайдера bxslider и кнопок к нему
+
+// убираю дефолтные тени, рамку и большой отступ снизу
+.bx-wrapper {
+	margin: 0 auto 30px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: none;
+}
+
+$bx_padding: 30px;
+.bxpager {
+	// отступы, чтобы превью не налезали на стрелки
+
+	padding: 0 $bx_padding;
+}
+
+// обводка превьюхи по ховеру
+.bxpager__img {
+	border: 1px solid transparent;
+	&:hover,
+	&:active {
+		border: 1px solid $c_active;
+	}
+}
+
+// кастомные кнопки вперед/назад
+.bxpager__pointer {
+	position: relative;
+}
+
+// внутренний класс плагина bxslider
+.bx-next {
+	background: $c_active;
+	text-align: center;
+	padding: 7px 0 7px 5px;
+	position: absolute;
+	top: 20px;
+	right: -$bx_padding/2;
+	cursor: pointer;
+	color: $c_header;
+	font-weight: bold;
+	text-decoration: none;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: -8px;
+		width: 0;
+		height: 0;
+		border-left: 8px solid $c_active;
+		border-top: 16px solid transparent;
+		border-bottom: 16px solid transparent;
+	}
+}
+
+.bx-prev {
+	background: $c_active;
+	text-align: center;
+	padding: 7px 6px 7px 0;
+	position: absolute;
+	top: 20px;
+	left: -$bx_padding/2;
+	cursor: pointer;
+	color: $c_header;
+	font-weight: bold;
+	text-decoration: none;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -8px;
+		width: 0;
+		height: 0;
+		border-right: 8px solid $c_active;
+		border-top: 16px solid transparent;
+		border-bottom: 16px solid transparent;
+	}
+}
+// оформление слайдера bxslider и кнопок к нему end

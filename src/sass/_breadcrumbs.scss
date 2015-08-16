@@ -1,11 +1,14 @@
+// breadcrumbs styles start
 .breadcrumbs {
 	padding: 20px 0;
 }
+
 .breadcrumbs__list {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
+
 .breadcrumbs__item {
 	display: inline-block;
 
@@ -13,15 +16,12 @@
 		content: ' >';
 		font-size: smaller;
 	}
-
 	&:last-child:after {
 		content: '';
 	}
 }
+
 .breadcrumbs__link {
 	display: inline-block;
 }
-.breadcrumbs__item.current {
-		color: $c_text;
-		text-decoration: none;
-}
+// breadcrumbs styles end

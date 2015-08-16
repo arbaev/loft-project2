@@ -1,0 +1,52 @@
+// стили блока контента start
+
+.prod {
+	@extend %clearfix;
+}
+
+.prod__title {
+	font-size: 2em;
+	color: $c_active;
+	margin: 0;
+	padding: 0 0 15px 0;
+}
+
+.prod__spec {
+	border-collapse: collapse;
+	width: 80%;
+}
+
+.prod__spec_cell {
+	width: 50%;
+	padding: 5px;
+	font-weight: 700;
+}
+
+.prod__spec_row:nth-child(even) {
+	background: $bg_even;
+}
+
+.prod__photo {
+	float: left;
+	width: 300px;
+	text-align: center;
+	padding: 30px 10px;
+}
+
+.prod__desc {
+	float: right;
+	width: 640px;
+}
+
+.about__text {
+	column-count: 3;
+	column-gap: 2em;
+	-moz-column-count: 3;
+	-moz-column-gap: 2em;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 2em;
+	text-align: justify;
+	padding-bottom: 40px;
+}
+
+// стили блока контента end

@@ -18,6 +18,13 @@ mixin nav(className, items, activeIndex)
 						a(class=className + '__link', href="#")= item
 	// меню навигации end
 
+//- сообщение для старых браузеров
+mixin browserupgrade
+	<!--[if lt IE 8]>
+	<p style="text-align: center; padding: 10px 0px; background-color: #ffa; width: 100%;">Вы используете <strong>чудовищно устаревший</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">выберите себе любой современный браузер</a> и возвращайтесь к нам.</p>
+	<![endif]-->
+
+//- просто список
 mixin spisok(className, items)
 	div(class=className)
 		ul(class=className + '__list')

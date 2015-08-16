@@ -1,21 +1,22 @@
-.main-header
+// main-header start
+.header
 	.container
 		.header__logo
-			a.header__logo-link(href="/" title="Abble Shop")
-				span.header__logo-text Abble Shop
-				img.header__logo-img(src="../img/logo.png" alt="")
+			a.header__logo_link(href="/" title="Abble Shop")
+				span.header__logo_text Abble Shop
+				img.header__logo_img(src="../img/logo.png" alt="")
 
 		.header__search
 			form.search__form(action="#" id="search")
-				input.search__form-input(type="text" name="search" placeholder="Поиск товаров")
-				button.search__form-btn(type="submit" value="Найти") Найти
+				input.search__form_input(type="text" name="search" placeholder="Поиск товаров")
+				button.search__form_btn(type="submit" value="Найти") Найти
 
 		ul.header__links
-			li.header__links-item: a.header__links-link(href="#" title="") Карта проезда
-			li.header__links-item: a.header__links-link(href="#" title="") История заказов
+			li.header__links_item: a.header__links_link(href="#" title="") Карта проезда
+			li.header__links_item: a.header__links_link(href="#" title="") История заказов
 
 		.header__basket
-			a.header__basket-link(href="#" title="") Корзина
+			a.header__basket_link(href="#" title="") Корзина
 
 			//- +nav('basket', menu, 2)
 			.basket
@@ -26,3 +27,4 @@
 							a.basket__link(href="#")
 								img.basket__img(src="http://lorempixel.com/60/60/abstract/")
 								.basket__text= "Abble ibad 10" + n++
+// main-header end

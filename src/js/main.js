@@ -11,6 +11,13 @@ var shopModule = (function() {
 		$('.header__basket').hover(_showBasket); // показать содержимое корзины
 		$(window).scroll(_showScrollToTop); // показать кнопку скролла
 		$('.scrolltotop').click(_scrollToTop); // скроллить наверх при нажатии на кнопку скролла
+		$('.bxslider').bxSlider({
+			pagerCustom: '#bx-pager',
+			nextSelector: '#bxpager-next',
+			prevSelector: '#bxpager-prev',
+			nextText: '&rsaquo;',
+			prevText: '&lsaquo;'
+		});
 	};
 
 	// показать содержимое корзины

@@ -1,16 +1,18 @@
+// footer styles start
+
 /*прибитый футер */
 .wrapper {
 	position: relative;
 	height: auto;
 	min-height: 100%;
 	min-width: 1010px;
-
 	&:after {
 		content: "";
 		height: $footer-height;
 		display: block;
 	}
 }
+
 .footer {
 	background: $bg_footer url(../img/footer-bg.png) repeat;
 	height: $footer-height;
@@ -24,59 +26,75 @@
 /*прибитый футер end */
 
 .footer__row {
+	@extend %clearfix;
 	padding-top: 30px;
 }
+
 .footer__logo {
 	float: left;
-	width: 260px;
-}
-.footer__nav {
-	float: left;
-}
-.footer__socials {
-	position: absolute;
-	right: 0;
+	width: 200px;
 }
 
-.footer__nav-menu {
-	display: inline-block;;
+.footer__logo_img {
+	position: absolute;
+	left: 0;
+	top: 60px;
+}
+
+.footer__logo_text {
+	text-indent: -9999px;
+	font-size: 0;
+}
+
+.footer-nav {
+	@extend %clearfix;
+	float: left;
+	width: 50%;
+}
+
+.footer-nav__menu {
+	display: inline-block;
+	;
 	width: 30%;
 	vertical-align: top;
 	padding-right: 10px;
 }
 
-.footer__logo-img {
-	position: absolute;
-	left: 0;
-	top: 60px;
-}
-.footer__logo-text {
-	text-indent: -9999px;
-	font-size: 0;
-}
-.footer__nav-title {
+.footer-nav__title {
 	font-weight: bold;
 	margin: 0;
 	padding-bottom: 5px;
 }
-.footer__nav-list {
+
+.footer-nav__list {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	line-height: 1.4;
 }
-.footer__nav-item {
+
+.footer-nav__item {
 	padding-bottom: 5px;
 }
-.footer__nav-link {
+
+.footer-nav__link {
 	color: $c_header;
 	text-decoration: underline;
 }
+
+.footer__socials {
+	position: absolute;
+	right: 0;
+}
+
 .footer__apps-link {
 	padding-right: 10px;
 	padding-bottom: 10px;
 	display: inline-block
 }
+
 .footer__apps {
 	padding-left: 3px;
 }
+
+// footer styles end

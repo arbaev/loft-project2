@@ -1,17 +1,22 @@
+// top-header styles start
 .topheader {
+	@extend %clearfix;
 	background: $bg_tophead;
 	color: $c_header;
 }
-.topheader-wrap {
+
+.topheader__wrap {
 	width: 1000px;
 	margin: 0 auto;
 	display: table;
 }
-.addr-wrap {
+
+.addr {
 	text-align: center;
 	margin-top: 10px;
 }
-.addr {
+
+.addr__text {
 	display: inline-block;
 	line-height: 1.5;
 
@@ -25,19 +30,23 @@
 		padding-right: 6px;
 	}
 }
+
 .phone {
 	color: $c_header;
 	text-align: right;
 	display: table-cell;
 	vertical-align: middle;
 }
+
 .phone__link {
 	text-decoration: none;
 }
+
 .phone__kod {
 	color: $c_active;
 	vertical-align: super;
 }
+
 .phone__num {
 	font-size: 1.6em;
 	color: white;
@@ -45,3 +54,5 @@
 		content: ' ';
 	}
 }
+
+// top-header styles start

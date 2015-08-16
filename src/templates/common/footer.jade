@@ -2,29 +2,29 @@
 	.container
 		.footer__row
 			.footer__logo
-				img.footer__logo-img(src="../img/logo-white.png" alt="logo")
-				span.footer__logo-text Abble Shop
-			.footer__nav.cf
-				.footer__nav-menu
-					h3.footer__nav-title О магазине
-					ul.footer__nav-list
+				img.footer__logo_img(src="../img/logo-white.png" alt="logo")
+				span.footer__logo_text Abble Shop
+			.footer-nav
+				.footer-nav__menu
+					h3.footer-nav__title О магазине
+					ul.footer-nav__list
 						each item in ['О нас','Гарантия','Доставка','Акции']
-							li.footer__nav-item
-								a.footer__nav-link(href="#")= item
+							li.footer-nav__item
+								a.footer-nav__link(href="#")= item
 
-				.footer__nav-menu
-					h3.footer__nav-title Каталог
-					ul.footer__nav-list
+				.footer-nav__menu
+					h3.footer-nav__title Каталог
+					ul.footer-nav__list
 						each item in menu
-							li.footer__nav-item
-								a.footer__nav-link(href="#")= item
+							li.footer-nav__item
+								a.footer-nav__link(href="#")= item
 
-				.footer__nav-menu
-					h3.footer__nav-title Контакты
-					ul.footer__nav-list
+				.footer-nav__menu
+					h3.footer-nav__title Контакты
+					ul.footer-nav__list
 						each item in ['Телефоны','Адреса','Карта проезда','Обратная связь']
-							li.footer__nav-item
-								a.footer__nav-link(href="#")= item
+							li.footer-nav__item
+								a.footer-nav__link(href="#")= item
 
 			.footer__socials
 				.footer__apps

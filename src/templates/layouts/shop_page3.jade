@@ -1,42 +1,68 @@
+//- дефолтные значения переменных
+block address
+	- var address = 'г. Городовск, пр.Уличный, д.2, оф.1'
+block menu
+	- var menu = ['Категория 1', 'Категория 2', 'Категория 3', 'Категория 4', 'Категория 5']
+
+//- подключение миксинов
+include ../common/_mixins.jade
+
 doctype html
 html(lang='ru-RU')
-include config.jade
-include ../common/head.jade
-include ../common/_mixins.jade
-body
-	.wrapper
-		.header
+	include ../common/head.jade
+	body
+		+browserupgrade
+		.wrapper
+			//- блоки шапки
 			include ../common/top-header.jade
 			include ../common/main-header.jade
 
-			//- навигация с 4 активным элементом
+			//-  навигация с 4 активным элементом
 			+nav('navigation', menu, 4)
 
+			//- основной контент
+			.content
+				.container
+					include ../common/breadcrumbs.jade
+					.prod
+						.prod__photo
+							//- галерея товара
+							ul.bxslider
+								//- imgQuantity - количество картинок товара
+								- var imgQuantity = 6
+								- var n = 0
+								while n < imgQuantity
+									li.bxslider__item: img.bxslider__img(src="../img/prods/prod1-" + n++ + ".jpg")
+							//- превьюшки товара
+							- var n = 0
+							#bx-pager.bxpager
+								.bxpager__pointer
+									span#bxpager-prev.bxpager__pointer_prev
+									span#bxpager-next.bxpager__pointer_next
+								while n < imgQuantity
+									a.bxpager__link(href="" data-slide-index= n): img.bxpager__img(src="../img/prods/prod1-" + n++ + "th.png")
 
-		.container
-			include ../common/breadcrumbs.jade
-			.prod.cf
-				.prod__photo
-						img.prod__photo-img(src="http://lorempixel.com/300/250/abstract/")
-				.prod__desc
-					h1.prod__title SSD Iwamoto 4Gb full abstract
-					- var n = 0
-					table.prod__spec
-						tbody
-							while n < 10
-								tr.prod__spec-row
-									td.prod__spec-cell= "Характеристика " + n
-									td.prod__spec-cell= "Значение " + n++
+						//- блок описания товара
+						.prod__desc
+							h1.prod__title SSD Iwamoto 4Gb full abstract
+							- var desc_rows = 0
+							table.prod__spec
+								tbody
+									while desc_rows < 10
+										tr.prod__spec_row
+											td.prod__spec_cell= "Характеристика " + desc_rows
+											td.prod__spec_cell= "Значение " + desc_rows++
 
-			.about
-				h2.about__title Пара слов о магазине
-				.about__text
-					|  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis beatae delectus, voluptates iste. Architecto eveniet quia quam magni aperiam ducimus dolorum, sequi aut temporibus corporis mollitia rerum in, doloribus unde doloremque odit expedita, eum. Placeat nihil atque itaque, sit veniam iure sapiente maxime saepe eligendi dignissimos. Commodi debitis quod magnam quis similique culpa, quisquam asperiores incidunt esse voluptatibus voluptate aut assumenda numquam enim, sint facilis temporibus quia fuga inventore. Nemo excepturi repellendus, tempora iure dolorum, ipsa sed vero tenetur commodi quidem distinctio, at vel adipisci quod iusto officiis reprehenderit labore! Illum tenetur, similique dolores iste nemo sequi cum repellendus error voluptate. Voluptatem consequuntur cumque, odio earum minima esse. Aliquid esse voluptate suscipit consequatur consequuntur dolorem dolorum provident, temporibus. A ut obcaecati distinctio similique voluptates quam harum ad quae delectus sint. Pariatur quas voluptatum dolorum, veniam sit culpa maiores quos perferendis, nisi ad vel voluptas repudiandae magni ipsum, tempora iste nulla accusamus quasi eveniet alias. Esse placeat, rem quas incidunt voluptatem ullam earum facilis suscipit accusantium, amet adipisci repudiandae quibusdam! Repudiandae laborum vitae eligendi minus. Quis commodi corporis officiis possimus perspiciatis iusto quaerat rerum ratione mollitia dolore impedit voluptas eius, suscipit delectus laborum quae ducimus velit molestias officia eaque harum porro!
+					//- блок описания магазина
+					.about
+						h2.about__title Пара слов о магазине
+						.about__text
+							|  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis beatae delectus, voluptates iste. Architecto eveniet quia quam magni aperiam ducimus dolorum, sequi aut temporibus corporis mollitia rerum in, doloribus unde doloremque odit expedita, eum. Placeat nihil atque itaque, sit veniam iure sapiente maxime saepe eligendi dignissimos. Commodi debitis quod magnam quis similique culpa, quisquam asperiores incidunt esse voluptatibus voluptate aut assumenda numquam enim, sint facilis temporibus quia fuga inventore. Nemo excepturi repellendus, tempora iure dolorum, ipsa sed vero tenetur commodi quidem distinctio, at vel adipisci quod iusto officiis reprehenderit labore! Illum tenetur, similique dolores iste nemo sequi cum repellendus error voluptate. Voluptatem consequuntur cumque, odio earum minima esse. Aliquid esse voluptate suscipit consequatur consequuntur dolorem dolorum provident, temporibus. A ut obcaecati distinctio similique voluptates quam harum ad quae delectus sint. Pariatur quas voluptatum dolorum, veniam sit culpa maiores quos perferendis, nisi ad vel voluptas repudiandae magni ipsum, tempora iste nulla accusamus quasi eveniet alias. Esse placeat, rem quas incidunt voluptatem ullam earum facilis suscipit accusantium, amet adipisci repudiandae quibusdam! Repudiandae laborum vitae eligendi minus. Quis commodi corporis officiis possimus perspiciatis iusto quaerat rerum ratione mollitia dolore impedit voluptas eius, suscipit delectus laborum quae ducimus velit molestias officia eaque harum porro!
 
-			.scrolltotop Наверх
-	include ../common/footer.jade
+					//- кнопка скролла наверх
+					.scrolltotop Наверх
 
+		include ../common/footer.jade
 
-
-
-	include ../common/fin.jade
+		//- подключение скриптов
+		include ../common/fin.jade

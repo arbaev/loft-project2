@@ -11,85 +11,53 @@ $bg_footer: #613993; /* footer bg */
 $m_hover: #dce6f0; /* menu hover bg */
 
 /* Blocks Guide */
-$top-header-height: 38px;
 $footer-height: 226px;
 
+@import "_social.scss";
+@import "_top-header.scss";
+@import "_main-header.scss";
+@import "_navigation.scss";
+@import "_breadcrumbs.scss";
+@import "_content.scss";
+@import "_bxslider.scss";
+@import "_footer.scss";
+
+// clearfix extend
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// common styles
 html {
 	height: 100%;
 }
+
 body {
 	height: 100%;
 	font-family: ElektraLightPro;
 	color: $c_text;
 }
+
 a {
 	color: $c_link;
-
 	&:hover,
 	&:active {
 		text-decoration: none;
 	}
 }
-.ch {
-	border: 2px solid red;
-	background: #0dd;
-}
+
 .container {
 	max-width: 1001px;
 	position: relative;
 	margin: 0 auto;
 }
-.content {
-}
-.header {
-}
 
-@import "_social.scss"; // кнопки соцсетей
-@import "_top-header.scss";
-@import "_main-header.scss";
-@import "_navigation.scss";
-@import "_breadcrumbs.scss";
-@import "_footer.scss";
-
-.about__text {
-	column-count: 3;
-	column-gap: 2em;
-	-moz-column-count: 3;
-	-moz-column-gap: 2em;
-	-webkit-column-count: 3;
-	-webkit-column-gap: 2em;
-	text-align:justify;
-	padding-bottom: 40px;
-}
-.prod__title {
-	font-size: 2em;
-	color: $c_active;
-	margin: 0;
-	padding: 0 0 15px 0;
-}
-.prod__spec {
-	border-collapse: collapse;
-	width: 80%;
-}
-.prod__spec-cell {
-	width: 50%;
-	padding: 5px;
-	font-weight: 700;
-}
-.prod__spec-row:nth-child(even) {
-	background: $bg_even;
-}
-.prod__photo {
-	float: left;
-	width: 350px;
-}
-.prod__desc {
-	float: right;
-	width: 640px;
-}
-
+// стили кнопки скролла наверх start
 .scrolltotop {
-	// width: 100px;
 	background: $c_active;
 	text-align: center;
 	padding: 10px 20px;
@@ -101,7 +69,6 @@ a {
 	color: $c_header;
 	font-weight: bold;
 	z-index: 999;
-
 	&:before {
 		content: '';
 		position: absolute;
@@ -109,9 +76,9 @@ a {
 		right: 40px;
 		width: 0;
 		height: 0;
-		border-bottom: 6px solid $c_active;
-		border-left: 6px solid transparent;
-		border-right: 6px solid transparent;
+		border-bottom: 8px solid $c_active;
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
 	}
 	&:after {
 		content: '';
@@ -120,45 +87,9 @@ a {
 		right: 40px;
 		width: 0;
 		height: 0;
-		border-bottom: 6px solid white;
-		border-left: 6px solid transparent;
-		border-right: 6px solid transparent;
+		border-bottom: 8px solid white;
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
 	}
 }
-
-
-
-/* ==========================================================================
-	 Micro clearfix hack by Nicolas Gallagher
-	 ========================================================================== */
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.cf:before,
-.cf:after {
-	content: " ";
-	/* 1 */
-	display: table;
-	/* 2 */
-}
-
-.cf:after {
-	clear: both;
-}
-
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.cf {
-	*zoom: 1;
-}
+// стили кнопки скролла наверх end
