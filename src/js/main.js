@@ -11,6 +11,7 @@ var shopModule = (function() {
 		$('.header__basket').hover(_showBasket); // показать содержимое корзины
 		$(window).scroll(_showScrollToTop); // показать кнопку скролла
 		$('.scrolltotop').click(_scrollToTop); // скроллить наверх при нажатии на кнопку скролла
+		$('#search').on('submit', _searchProds); // отправка запроса поиска
 		$('.bxslider').bxSlider({
 			pagerCustom: '#bx-pager',
 			nextSelector: '#bxpager-next',
@@ -37,6 +38,35 @@ var shopModule = (function() {
 			$('body,html').animate({scrollTop:0},400);
 	};
 
+	var _searchProds = function(ev) {
+		var searchVal = $('#search').find('input').val();
+		console.log(searchVal)
+		var form = $(this),
+			url = 'search.php',
+			data = form.serialize();
+
+		ev.preventDefault();
+
+			$.ajax({
+					url: url,
+					type: 'post',
+					dataType: 'json',
+					data: data,
+				})
+				.done (function(answer) {
+					if (answer.status === 'OK') {
+						alert('Вы искали ' + answer.text);
+
+					} else if (answer.status === 'empty') {
+						alert(answer.text);
+					} else {
+						alert('Error: ' + answer.text);
+						};
+				})
+				.fail (function(answer) {
+					console.log('fail: ' + answer.text);
+				});
+		};
 
 	return {
 		init : init
