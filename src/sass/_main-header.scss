@@ -27,14 +27,32 @@
 .search__form_input {
 	width: 260px;
 	padding: 10px;
+	border: 1px solid $c_active;
+	color: $c_active;
+}
+::-webkit-input-placeholder {
+	color: $c_active;
+}
+
+::-moz-placeholder {
+	color: $c_active;
+}
+
+:-moz-placeholder {
+	color: $c_active;
+}
+
+:-ms-input-placeholder {
+	color: $c_active;
 }
 
 .search__form_btn {
 	width: 80px;
 	background: #00b9fe;
 	position: relative;
-	padding: 12px;
+	padding: 11px;
 	margin: 0;
+	margin-left: -5px;
 	color: #FFF;
 	text-decoration: none;
 	outline: none;
