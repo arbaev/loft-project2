@@ -4,6 +4,8 @@ var shopModule = (function() {
 	// инициализация функций
 	var init = function () {
 		_setupListeners();
+		// чтобы IE8 показывал полосатую таблицу спецификации
+		$("tr:even").addClass("even");
 	};
 
 	// прослушка событий

@@ -23,8 +23,13 @@
 }
 
 .prod__spec_row:nth-child(even) {
+	// background: $bg_even;
+}
+// for IE8 & jquery
+.prod__spec_row.even {
 	background: $bg_even;
 }
+
 
 .prod__photo {
 	float: left;

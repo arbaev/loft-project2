@@ -30,6 +30,13 @@ $bx_padding: 30px;
 	position: relative;
 }
 
+.bxpager__pointer_prev,
+.bxpager__pointer_next {
+	opacity: 0.6;
+	&:hover {
+		opacity: 1;
+	}
+}
 // внутренний класс плагина bxslider
 .bx-next {
 	background: $c_active;

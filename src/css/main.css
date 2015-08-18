@@ -219,7 +219,7 @@
   outline: none;
   display: block;
   float: left;
-  padding: 0 10px 0 40px;
+  padding: 0 20px 0 40px;
   position: relative;
   transition: all 0.3s; }
 
@@ -295,7 +295,7 @@
   padding: 5px;
   font-weight: 700; }
 
-.prod__spec_row:nth-child(even) {
+.prod__spec_row.even {
   background: #eef2f4; }
 
 .prod__photo {
@@ -336,6 +336,13 @@
 
 .bxpager__pointer {
   position: relative; }
+
+.bxpager__pointer_prev,
+.bxpager__pointer_next {
+  opacity: 0.6; }
+  .bxpager__pointer_prev:hover,
+  .bxpager__pointer_next:hover {
+    opacity: 1; }
 
 .bx-next {
   background: #00b9fe;
