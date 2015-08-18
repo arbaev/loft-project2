@@ -295,6 +295,9 @@
   padding: 5px;
   font-weight: 700; }
 
+.prod__spec_row:nth-child(odd) {
+  background: #eef2f4; }
+
 .prod__spec_row.even {
   background: #eef2f4; }
 

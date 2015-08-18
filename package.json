@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "Loftschool project #2",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "wiredep": "^2.2.2"
+  },
   "devDependencies": {
     "browser-sync": "^2.8.2",
     "gulp": "^3.9.0",

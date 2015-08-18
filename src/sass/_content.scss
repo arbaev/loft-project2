@@ -22,8 +22,8 @@
 	font-weight: 700;
 }
 
-.prod__spec_row:nth-child(even) {
-	// background: $bg_even;
+.prod__spec_row:nth-child(odd) {
+	background: $bg_even;
 }
 // for IE8 & jquery
 .prod__spec_row.even {

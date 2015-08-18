@@ -17,6 +17,7 @@
   "dependencies": {
     "normalize.css": "~3.0.3",
     "jquery": "1.11.3",
-    "bxslider-4": "~4.2.5"
+    "bxslider-4": "~4.2.5",
+    "jquery-placeholder": "~2.1.2"
   }
 }

@@ -39,8 +39,8 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('src/css'));
 });
 
-// Запускаем локальный сервер (только после компиляции jade&sass)
-gulp.task('server', ['jade','sass'], function () {
+// Запускаем локальный сервер (только после компиляции jade&sass и wiredep)
+gulp.task('server', ['jade','sass','wiredep'], function () {
   browserSync({
     notify: true,
     port: 9000,
@@ -152,7 +152,7 @@ gulp.task('dist', ['useref', 'images', 'fonts', 'extras'], function () {
 });
 
 // Собираем папку DIST (только после компиляции Jade и Sass)
-gulp.task('build', ['clean', 'jade', 'sass'], function () {
+gulp.task('build', ['clean', 'wiredep', 'jade', 'sass'], function () {
   gulp.start('dist');
 });
 
