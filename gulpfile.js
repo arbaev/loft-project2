@@ -40,7 +40,7 @@ gulp.task('sass', function () {
 });
 
 // Запускаем локальный сервер (только после компиляции jade&sass и wiredep)
-gulp.task('server', ['jade','sass','wiredep'], function () {
+gulp.task('server', ['wiredep','jade','sass'], function () {
   browserSync({
     notify: true,
     port: 9000,
