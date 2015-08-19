@@ -4,7 +4,8 @@ var shopModule = (function() {
 	// инициализация функций
 	var init = function () {
 		_setupListeners();
-		$("tr:even").addClass("even"); // полосатая таблица спецификации для IE8
+		$("tr:odd").addClass("odd"); // полосатая таблица спецификации для IE8
+		$(".basket__item:odd").addClass("odd"); // полосатая таблица спецификации для IE8
 		$('input, textarea').placeholder();  // плейсхолдеры для IE8
 	};
 
