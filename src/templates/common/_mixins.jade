@@ -14,8 +14,8 @@ mixin nav(className, items, activeIndex)
 		.container
 			ul(class=className + '__list')
 				each item, ndx in items
-					li(class=className + '__item' + ((ndx == activeIndex) ? ' current' : ''))
-						a(class=className + '__link', href="#")= item
+					li(class=className + '__item')
+						a(class=className + '__link' + ((ndx == activeIndex) ? ' current' : ''), href="#")= item
 	// меню навигации end
 
 //- сообщение для старых браузеров

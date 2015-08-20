@@ -1,3 +1,181 @@
+// высота блока меню
+$m_height: 40px;
+// ширина картинки-стрелочки
+$m_width: 15px;
+
+.menu {
+	background: $bg_nav;
+}
+
+.menu__list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-left: 10px;
+}
+
+.menu__link {
+	color: $c_text;
+	text-decoration: none;
+	line-height: $m_height;
+	display: inline-block;
+	padding: 0 8px;
+
+	&:hover {
+		background: $m_hover;
+		&:before {
+		background: url(/img/menuarrow-hover-end.png) no-repeat;
+		content: "";
+		height: $m_height;
+		width: $m_width;
+		position: absolute;
+		top: 0;
+		left: -10px;
+		}
+		&:after {
+		background: url(/img/menuarrow-hover-start.png) no-repeat;
+		content: "";
+		height: $m_height;
+		width: $m_width;
+		position: absolute;
+		top: 0;
+		right: -3px;
+		}
+	}
+}
+
+.menu__item {
+	display: table-cell;
+	padding-right: 10px;
+	padding-left: 5px;
+	position: relative;
+
+	&:after {
+		background: url(/img/menuarrow.png) no-repeat;
+		content: "";
+		height: $m_height;
+		width: $m_width;
+		position: absolute;
+		top: 0;
+	}
+
+	&:first-child:before {
+		background: url(/img/menuarrow.png) no-repeat;
+		content: "";
+		height: $m_height;
+		width: $m_width;
+		position: absolute;
+		top: 0;
+		left: -10px;
+	}
+}
+.current {
+	background: $c_active;
+	color: $c_header;
+	&:before,
+	&:hover:before {
+		background: url(/img/menuarrow-current-end.png) no-repeat;
+		content: "";
+		height: $m_height;
+		width: $m_width;
+		position: absolute;
+		top: 0;
+		left: -10px;
+		}
+	&:after,
+	&:hover:after {
+		background: url(/img/menuarrow-current-start.png) no-repeat;
+		content: "";
+		height: $m_height;
+		width: $m_width;
+		position: absolute;
+		top: 0;
+		right: -3px;
+		}
+	&:hover {
+			background: $c_active;
+		}
+	}
+
+
+// ---------------------
+
+.mainmenu {
+	background: $bg_nav;
+}
+
+.mainmenu__list {
+	list-style-type: none;
+	padding: 0;
+}
+.mainmenu__item {
+	display: table-cell;
+	&:after {
+		background: url(/img/menuarrow.png) no-repeat;
+		content: "";
+		float: right;
+		display: block;
+		height: $m_height;
+		width: $m_width;
+	}
+	&:before {
+		content: "";
+		float: left;
+		display: block;
+		height: $m_height;
+		width: $m_width;
+		margin-left: -15px;
+		padding-left: 4px;
+	}
+	&:first-child:before {
+		background: url(/img/menuarrow.png) no-repeat;
+		content: "";
+		float: left;
+		margin-left: 0;
+		display: block;
+		height: $m_height;
+		width: $m_width;
+	}
+
+	&:hover {
+		background: $m_hover;
+		&:after {
+		background: url(/img/menuarrow-hover-start.png) no-repeat;
+		z-index: 12;
+		}
+		&:before {
+		background: url(/img/menuarrow-hover-end.png) no-repeat;
+		}
+	}
+}
+
+.mainmenu__link {
+	color: $c_text;
+	text-decoration: none;
+	line-height: $m_height;
+	display: inline-block;
+	padding: 0 8px;
+}
+
+// current styles
+.mainmenu__item.current
+{
+	background: $c_active;
+		&:after {
+		background: url(/img/menuarrow-current-start.png) no-repeat;
+		z-index: 10;
+		}
+		&:before {
+		background: url(/img/menuarrow-current-end.png) no-repeat;
+		z-index: 5;
+		}
+}
+.mainmenu__item.current .mainmenu__link
+{
+	color: $c_header;
+}
+
+
 // main menu, navigation styles start
 
 // высота блока меню
@@ -82,7 +260,7 @@ $m_height: 40px;
 
 // для последнего пункта меню стрелка не нужна
 .navigation__item:last-child:after {
-	content: none;
+	// content: none;
 }
 
 // main menu, navigation styles end
