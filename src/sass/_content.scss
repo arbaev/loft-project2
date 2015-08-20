@@ -44,15 +44,28 @@
 	width: 640px;
 }
 
+.about__title {
+	margin-bottom: 0;
+}
 .about__text {
-	column-count: 3;
-	column-gap: 2em;
-	-moz-column-count: 3;
-	-moz-column-gap: 2em;
-	-webkit-column-count: 3;
-	-webkit-column-gap: 2em;
+	// стили для 3х колонок под нормальные браузеры без js
+	// column-count: 3;
+	// column-gap: 2em;
+	// -moz-column-count: 3;
+	// -moz-column-gap: 2em;
+	// -webkit-column-count: 3;
+	// -webkit-column-gap: 2em;
 	text-align: justify;
 	padding-bottom: 40px;
 }
-
+// ратычные стили под плагин columnizer
+.about__text p {
+	padding: 0 15px;
+}
+.about__text .first p {
+	padding-left: 0;
+}
+.about__text .last p {
+	padding-right: 0;
+}
 // стили блока контента end

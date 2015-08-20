@@ -47,7 +47,7 @@
 .footer-nav {
 	@extend %clearfix;
 	float: left;
-	width: 620px;
+	width: 520px;
 }
 
 .footer-nav__menu {
@@ -81,8 +81,8 @@
 }
 
 .footer__socials {
-	position: absolute;
-	right: 0;
+	float: right;
+	width: 240px;
 }
 
 .footer__apps-link {
