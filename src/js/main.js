@@ -7,7 +7,18 @@ var shopModule = (function() {
 		$('tr:odd').addClass('odd'); // полосатая таблица спецификации для IE8
 		$('.basket__item:odd').addClass('odd'); // полосатая таблица спецификации для IE8
 		$('input, textarea').placeholder();  // плейсхолдеры для IE8
-		$('.about__text').columnize({ columns: 3 });
+		$('.about__text').columnize({ columns: 3 }); // текст по колонкам, для совместимости с IE8
+		$('.bxslider').bxSlider({
+			slideWidth: 74,
+			minSlides: 3,
+			maxSlides: 3,
+			slideMargin: 10,
+			pagerCustom: '#bx-pager',
+			nextSelector: '#bxpager-next',
+			prevSelector: '#bxpager-prev',
+			nextText: '&rsaquo;',
+			prevText: '&lsaquo;'
+		});
 	};
 
 	// прослушка событий
@@ -16,14 +27,20 @@ var shopModule = (function() {
 		$(window).scroll(_showScrollToTop); // показать кнопку скролла
 		$('.scrolltotop').click(_scrollToTop); // скроллить наверх при нажатии на кнопку скролла
 		$('#search').on('submit', _searchProds); // отправка запроса поиска
-		$('.bxslider').bxSlider({
-			pagerCustom: '#bx-pager',
-			nextSelector: '#bxpager-next',
-			prevSelector: '#bxpager-prev',
-			nextText: '&rsaquo;',
-			prevText: '&lsaquo;'
-		});
+		$('.bxslider__img').on('click', _showProdImg); // отправка запроса поиска
 	};
+
+	// показать картинку продукта
+	// меняю урл картинки продукта в зависимости от урла превьюшки
+	var _showProdImg = function() {
+		var
+			imgPreviewUrl,
+			imgUrl;
+		imgPreviewUrl = $(this).attr('src');
+		imgUrl = imgPreviewUrl.replace('th.png', '.jpg');
+		$('.prod__photo_img').attr('src', imgUrl);
+	};
+
 
 	// показать содержимое корзины
 	var _showBasket = function(ev) {

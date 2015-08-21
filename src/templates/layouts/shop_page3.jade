@@ -27,20 +27,18 @@ html(lang='ru-RU')
 					.prod
 						.prod__photo
 							//- галерея товара
+							img.prod__photo_img(src="img/prods/prod1-0.jpg")
+							.bxpager__pointer
+								span#bxpager-prev.bxpager__pointer_prev
+								span#bxpager-next.bxpager__pointer_next
 							ul.bxslider
 								//- imgQuantity - количество картинок товара
 								- var imgQuantity = 6
 								- var n = 0
 								while n < imgQuantity
-									li.bxslider__item: img.bxslider__img(src="img/prods/prod1-" + n++ + ".jpg")
-							//- превьюшки товара
-							- var n = 0
-							#bx-pager.bxpager
-								.bxpager__pointer
-									span#bxpager-prev.bxpager__pointer_prev
-									span#bxpager-next.bxpager__pointer_next
-								while n < imgQuantity
-									a.bxpager__link(href="" data-slide-index= n): img.bxpager__img(src="img/prods/prod1-" + n++ + "th.png")
+									li.bxslider__item
+										a.bxslider__link(href="#")
+											img.bxslider__img(src="img/prods/prod1-" + n++ + "th.png")
 
 						//- блок описания товара
 						.prod__desc

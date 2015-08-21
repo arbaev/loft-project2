@@ -353,6 +353,11 @@
   box-shadow: none;
   border: none; }
 
+.bxslider__link {
+  display: block; }
+  .bxslider__link:hover {
+    border: 1px solid #00b9fe; }
+
 .bxpager {
   padding: 0 30px; }
 
@@ -377,8 +382,8 @@
   text-align: center;
   padding: 7px 0 7px 5px;
   position: absolute;
-  top: 20px;
-  right: -15px;
+  top: 10px;
+  right: 0;
   cursor: pointer;
   color: #fff;
   font-weight: bold;
@@ -399,8 +404,8 @@
   text-align: center;
   padding: 7px 6px 7px 0;
   position: absolute;
-  top: 20px;
-  left: -15px;
+  top: 10px;
+  left: 0;
   cursor: pointer;
   color: #fff;
   font-weight: bold;
