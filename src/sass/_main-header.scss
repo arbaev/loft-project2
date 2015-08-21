@@ -16,7 +16,10 @@
 	text-indent: -9999px;
 	font-size: 0;
 }
-
+.header__logo_img {
+	max-width: 197px;
+	max-height: 57px;
+}
 .header__search {
 	float: left;
 	position: relative;

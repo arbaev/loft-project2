@@ -26,7 +26,7 @@ $m_width: 15px;
 	&:hover {
 		background: $m_hover;
 		&:before {
-		background: url(/img/menuarrow-hover-end.png) no-repeat;
+		background: url(../img/menuarrow-hover-end.png) no-repeat;
 		content: "";
 		height: $m_height;
 		width: $m_width;
@@ -35,7 +35,7 @@ $m_width: 15px;
 		left: -10px;
 		}
 		&:after {
-		background: url(/img/menuarrow-hover-start.png) no-repeat;
+		background: url(../img/menuarrow-hover-start.png) no-repeat;
 		content: "";
 		height: $m_height;
 		width: $m_width;
@@ -53,7 +53,7 @@ $m_width: 15px;
 	position: relative;
 
 	&:after {
-		background: url(/img/menuarrow.png) no-repeat;
+		background: url(../img/menuarrow.png) no-repeat;
 		content: "";
 		height: $m_height;
 		width: $m_width;
@@ -62,7 +62,7 @@ $m_width: 15px;
 	}
 
 	&:first-child:before {
-		background: url(/img/menuarrow.png) no-repeat;
+		background: url(../img/menuarrow.png) no-repeat;
 		content: "";
 		height: $m_height;
 		width: $m_width;
@@ -76,7 +76,7 @@ $m_width: 15px;
 	color: $c_header;
 	&:before,
 	&:hover:before {
-		background: url(/img/menuarrow-current-end.png) no-repeat;
+		background: url(../img/menuarrow-current-end.png) no-repeat;
 		content: "";
 		height: $m_height;
 		width: $m_width;
@@ -86,7 +86,7 @@ $m_width: 15px;
 		}
 	&:after,
 	&:hover:after {
-		background: url(/img/menuarrow-current-start.png) no-repeat;
+		background: url(../img/menuarrow-current-start.png) no-repeat;
 		content: "";
 		height: $m_height;
 		width: $m_width;

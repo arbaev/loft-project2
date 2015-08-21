@@ -3,13 +3,13 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: table-cell;
   vertical-align: middle; }
 
 .social_scale {
   -webkit-transform: scale(0.6);
   -ms-transform: scale(0.6);
-  transform: scale(0.6); }
+  transform: scale(0.6);
+  margin-left: -30px; }
 
 .social__item {
   display: inline-block;
@@ -21,7 +21,10 @@
   display: block;
   width: 44px;
   height: 44px;
-  text-indent: -9999px; }
+  text-indent: -9999px;
+  opacity: 0.7; }
+  .social__link:hover {
+    opacity: 1; }
 
 .social__link_fb {
   background-position: -5px -5px; }
@@ -32,22 +35,35 @@
 .social__link_vk {
   background-position: -113px -5px; }
 
-.topheader {
+.header-top {
+  position: relative;
+  height: 41px;
   background: #46636f;
   color: #fff; }
+  .header-top .container {
+    min-height: 41px;
+    text-align: center; }
 
-.topheader__wrap {
-  width: 1000px;
-  margin: 0 auto;
-  display: table; }
+.header-top__phone {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 8px; }
 
-.addr {
-  text-align: center;
-  margin-top: 10px; }
+.header__socials {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  margin: 0;
+  padding: 0; }
 
 .addr__text {
   display: inline-block;
-  line-height: 1.5; }
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: top;
+  margin-top: 8px; }
   .addr__text:before {
     background: url(../img/map-point.png) no-repeat;
     width: 16px;
@@ -56,12 +72,6 @@
     display: block;
     float: left;
     padding-right: 6px; }
-
-.phone {
-  color: #fff;
-  text-align: right;
-  display: table-cell;
-  vertical-align: middle; }
 
 .phone__link {
   text-decoration: none; }
@@ -90,6 +100,10 @@
 .header__logo_text {
   text-indent: -9999px;
   font-size: 0; }
+
+.header__logo_img {
+  max-width: 197px;
+  max-height: 57px; }
 
 .header__search {
   float: left;
@@ -219,7 +233,7 @@
   .menu__link:hover {
     background: #dce6f0; }
     .menu__link:hover:before {
-      background: url(/img/menuarrow-hover-end.png) no-repeat;
+      background: url(../img/menuarrow-hover-end.png) no-repeat;
       content: "";
       height: 40px;
       width: 15px;
@@ -227,7 +241,7 @@
       top: 0;
       left: -10px; }
     .menu__link:hover:after {
-      background: url(/img/menuarrow-hover-start.png) no-repeat;
+      background: url(../img/menuarrow-hover-start.png) no-repeat;
       content: "";
       height: 40px;
       width: 15px;
@@ -241,14 +255,14 @@
   padding-left: 5px;
   position: relative; }
   .menu__item:after {
-    background: url(/img/menuarrow.png) no-repeat;
+    background: url(../img/menuarrow.png) no-repeat;
     content: "";
     height: 40px;
     width: 15px;
     position: absolute;
     top: 0; }
   .menu__item:first-child:before {
-    background: url(/img/menuarrow.png) no-repeat;
+    background: url(../img/menuarrow.png) no-repeat;
     content: "";
     height: 40px;
     width: 15px;
@@ -261,7 +275,7 @@
   color: #fff; }
   .current:before,
   .current:hover:before {
-    background: url(/img/menuarrow-current-end.png) no-repeat;
+    background: url(../img/menuarrow-current-end.png) no-repeat;
     content: "";
     height: 40px;
     width: 15px;
@@ -270,7 +284,7 @@
     left: -10px; }
   .current:after,
   .current:hover:after {
-    background: url(/img/menuarrow-current-start.png) no-repeat;
+    background: url(../img/menuarrow-current-start.png) no-repeat;
     content: "";
     height: 40px;
     width: 15px;
@@ -310,7 +324,11 @@
   width: 80%; }
 
 .prod__spec_cell {
-  width: 50%;
+  width: 40%;
+  padding: 5px; }
+
+.prod__spec_cell-bold {
+  width: 60%;
   padding: 5px;
   font-weight: 700; }
 
@@ -319,12 +337,6 @@
 
 .odd {
   background: #eef2f4; }
-
-.prod__photo {
-  float: left;
-  width: 300px;
-  text-align: center;
-  padding: 30px 10px; }
 
 .prod__desc {
   float: right;
@@ -345,6 +357,14 @@
 
 .about__text .last p {
   padding-right: 0; }
+
+.prod__photo {
+  float: left;
+  width: 300px;
+  text-align: center;
+  padding: 30px 10px;
+  width: 320px;
+  height: 240px; }
 
 .bx-wrapper {
   margin: 0 auto 30px;
@@ -490,14 +510,16 @@
   width: 240px; }
 
 .footer__apps-link {
-  padding-right: 10px;
-  padding-bottom: 10px;
-  display: inline-block; }
+  display: block;
+  opacity: 0.7; }
+  .footer__apps-link:hover {
+    opacity: 1; }
 
 .footer__apps {
-  padding-left: 3px; }
+  padding-left: 3px;
+  display: inline-block; }
 
-.topheader:after, .prod:after, .footer__row:after, .footer-nav:after {
+.prod:after, .footer__row:after, .footer-nav:after {
   content: "";
   display: table;
   clear: both; }

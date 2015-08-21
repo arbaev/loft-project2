@@ -1,24 +1,41 @@
 // top-header styles start
-.topheader {
-	@extend %clearfix;
+
+// высота топ-хидера
+$header-top-height: 41px;
+
+.header-top {
+	position: relative;
+	height: $header-top-height;
 	background: $bg_tophead;
 	color: $c_header;
+	.container {
+		min-height: $header-top-height;
+		text-align: center;
+	}
 }
 
-.topheader__wrap {
-	width: 1000px;
-	margin: 0 auto;
-	display: table;
+.header-top__phone {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 8px;
 }
 
-.addr {
-	text-align: center;
-	margin-top: 10px;
+.header__socials {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
 }
 
 .addr__text {
 	display: inline-block;
 	line-height: 1.5;
+	text-align: center;
+	vertical-align: top;
+	margin-top: 8px;
 
 	&:before {
 		background: url(../img/map-point.png) no-repeat;
@@ -29,13 +46,6 @@
 		float: left;
 		padding-right: 6px;
 	}
-}
-
-.phone {
-	color: $c_header;
-	text-align: right;
-	display: table-cell;
-	vertical-align: middle;
 }
 
 .phone__link {

@@ -32,10 +32,13 @@ var shopModule = (function() {
 
 	// показать картинку продукта
 	// меняю урл картинки продукта в зависимости от урла превьюшки
-	var _showProdImg = function() {
+	var _showProdImg = function(ev) {
 		var
 			imgPreviewUrl,
 			imgUrl;
+
+		ev.preventDefault();
+
 		imgPreviewUrl = $(this).attr('src');
 		imgUrl = imgPreviewUrl.replace('th.png', '.jpg');
 		$('.prod__photo_img').attr('src', imgUrl);
@@ -61,7 +64,6 @@ var shopModule = (function() {
 
 	var _searchProds = function(ev) {
 		var searchVal = $('#search').find('input').val();
-		console.log(searchVal)
 		var form = $(this),
 			url = 'search.php',
 			data = form.serialize();

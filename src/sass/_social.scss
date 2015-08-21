@@ -4,15 +4,17 @@
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	display: table-cell;
 	vertical-align: middle
 }
 
 // scale, применяется в top-header
+$scale: 0.6;
 .social_scale {
-	-webkit-transform: scale(0.6);
-			-ms-transform: scale(0.6);
-					transform: scale(0.6);
+	-webkit-transform: scale($scale);
+			-ms-transform: scale($scale);
+					transform: scale($scale);
+// scale уменьшает по центру, поэтому задаём отступ вручную
+	margin-left: -30px;
 }
 
 .social__item {
@@ -27,6 +29,10 @@
 	width: 44px;
 	height: 44px;
 	text-indent: -9999px;
+	opacity: 0.7;
+	&:hover {
+		opacity: 1;
+	}
 }
 
 .social__link_fb {

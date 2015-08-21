@@ -1,15 +1,15 @@
 // topheader start
-.topheader
-	.topheader__wrap
-		//- блок кнопок соцсетей с уменьшением
-		+social(class="social_scale")
+.header-top
+	.container
+		.header__socials
+			//- блок кнопок соцсетей с уменьшением
+			+social(class="social_scale")
 
-		.addr
-			span.addr__text
-				block addr
-					| #{address}
+		span.addr__text
+			block addr
+				| #{address}
 
-		.phone
+		.header-top__phone
 			a.phone__link(href="tel:+79213211212")
 				span.phone__kod +7 (921)
 				span.phone__num 321-12-12

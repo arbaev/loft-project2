@@ -17,7 +17,12 @@
 }
 
 .prod__spec_cell {
-	width: 50%;
+	width: 40%;
+	padding: 5px;
+}
+
+.prod__spec_cell-bold {
+	width: 60%;
 	padding: 5px;
 	font-weight: 700;
 }
@@ -29,14 +34,6 @@
 // used in table spec and basket menu
 .odd {
 	background: $bg_even;
-}
-
-
-.prod__photo {
-	float: left;
-	width: 300px;
-	text-align: center;
-	padding: 30px 10px;
 }
 
 .prod__desc {
