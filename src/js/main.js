@@ -8,17 +8,6 @@ var shopModule = (function() {
 		$('.basket__item:odd').addClass('odd'); // полосатая таблица спецификации для IE8
 		$('input, textarea').placeholder();  // плейсхолдеры для IE8
 		$('.about__text').columnize({ columns: 3 }); // текст по колонкам, для совместимости с IE8
-		$('.bxslider').bxSlider({
-			slideWidth: 74,
-			minSlides: 3,
-			maxSlides: 3,
-			slideMargin: 10,
-			pagerCustom: '#bx-pager',
-			nextSelector: '#bxpager-next',
-			prevSelector: '#bxpager-prev',
-			nextText: '&rsaquo;',
-			prevText: '&lsaquo;'
-		});
 	};
 
 	// прослушка событий
@@ -28,6 +17,17 @@ var shopModule = (function() {
 		$('.scrolltotop').click(_scrollToTop); // скроллить наверх при нажатии на кнопку скролла
 		$('#search').on('submit', _searchProds); // отправка запроса поиска
 		$('.bxslider__img').on('click', _showProdImg); // отправка запроса поиска
+		$('.bxslider').stop(true).bxSlider({
+			slideWidth: 74,
+			minSlides: 3,
+			maxSlides: 3,
+			slideMargin: 10,
+			pagerCustom: 'bxpager__pointer',
+			nextSelector: '#bxpager-next',
+			prevSelector: '#bxpager-prev',
+			nextText: '&rsaquo;',
+			prevText: '&lsaquo;'
+		});
 	};
 
 	// показать картинку продукта

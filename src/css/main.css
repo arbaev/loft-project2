@@ -360,18 +360,29 @@
 
 .prod__photo {
   float: left;
-  width: 300px;
-  text-align: center;
-  padding: 30px 10px;
   width: 320px;
-  height: 240px; }
+  text-align: center;
+  padding: 30px 10px; }
+
+.prod__photo_wrap {
+  width: 320px;
+  height: 240px;
+  min-height: 240px;
+  padding-bottom: 20px; }
+
+.prod__photo_img {
+  max-width: 100%;
+  height: auto;
+  max-height: 240px;
+  display: block;
+  margin: 0 auto; }
 
 .bx-wrapper {
   margin: 0 auto 30px;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
+  border: none;
   box-shadow: none;
-  border: none; }
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none; }
 
 .bxslider__link {
   display: block; }
@@ -390,24 +401,20 @@
 .bxpager__pointer {
   position: relative; }
 
-.bxpager__pointer_prev,
-.bxpager__pointer_next {
-  opacity: 0.6; }
-  .bxpager__pointer_prev:hover,
-  .bxpager__pointer_next:hover {
-    opacity: 1; }
-
 .bx-next {
   background: #00b9fe;
   text-align: center;
   padding: 7px 0 7px 5px;
   position: absolute;
   top: 10px;
-  right: 0;
+  right: 15px;
   cursor: pointer;
   color: #fff;
   font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+  opacity: 0.6; }
+  .bx-next:hover {
+    opacity: 1; }
   .bx-next:after {
     content: '';
     position: absolute;
@@ -425,11 +432,14 @@
   padding: 7px 6px 7px 0;
   position: absolute;
   top: 10px;
-  left: 0;
+  left: 15px;
   cursor: pointer;
   color: #fff;
   font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+  opacity: 0.6; }
+  .bx-prev:hover {
+    opacity: 1; }
   .bx-prev:after {
     content: '';
     position: absolute;

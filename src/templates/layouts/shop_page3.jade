@@ -27,13 +27,13 @@ html(lang='ru-RU')
 					.prod
 						.prod__photo
 							//- галерея товара
-							img.prod__photo_img(src="img/prods/prod1-0.jpg")
+							.prod__photo_wrap: img.prod__photo_img(src="img/prods/prod1-0.jpg")
 							.bxpager__pointer
 								span#bxpager-prev.bxpager__pointer_prev
 								span#bxpager-next.bxpager__pointer_next
 							ul.bxslider
 								//- imgQuantity - количество картинок товара
-								- var imgQuantity = 6
+								- var imgQuantity = 7
 								- var n = 0
 								while n < imgQuantity
 									li.bxslider__item

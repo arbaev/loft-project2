@@ -2,20 +2,30 @@
 
 .prod__photo {
 	float: left;
-	width: 300px;
+	width: 320px;
 	text-align: center;
 	padding: 30px 10px;
+}
+.prod__photo_wrap {
 	width: 320px;
 	height: 240px;
+	min-height: 240px;
+	padding-bottom: 20px;
 }
-
+.prod__photo_img {
+	max-width: 100%;
+	height: auto;
+	max-height: 240px;
+	display: block;
+	margin: 0 auto;
+}
 // убираю дефолтные тени, рамку и большой отступ снизу
 .bx-wrapper {
 	margin: 0 auto 30px;
+	border: none;
+	box-shadow: none;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
-	box-shadow: none;
-	border: none;
 }
 
 .bxslider__link {
@@ -48,10 +58,6 @@ $bx_padding: 30px;
 
 .bxpager__pointer_prev,
 .bxpager__pointer_next {
-	opacity: 0.6;
-	&:hover {
-		opacity: 1;
-	}
 }
 // внутренний класс плагина bxslider
 .bx-next {
@@ -60,11 +66,15 @@ $bx_padding: 30px;
 	padding: 7px 0 7px 5px;
 	position: absolute;
 	top: 10px;
-	right: 0;
+	right: 15px;
 	cursor: pointer;
 	color: $c_header;
 	font-weight: bold;
 	text-decoration: none;
+	opacity: 0.6;
+	&:hover {
+		opacity: 1;
+	}
 	&:after {
 		content: '';
 		position: absolute;
@@ -84,11 +94,15 @@ $bx_padding: 30px;
 	padding: 7px 6px 7px 0;
 	position: absolute;
 	top: 10px;
-	left: 0;
+	left: 15px;
 	cursor: pointer;
 	color: $c_header;
 	font-weight: bold;
 	text-decoration: none;
+	opacity: 0.6;
+	&:hover {
+		opacity: 1;
+	}
 	&:after {
 		content: '';
 		position: absolute;
