@@ -74,7 +74,10 @@
     padding-right: 6px; }
 
 .phone__link {
-  text-decoration: none; }
+  text-decoration: none;
+  opacity: 0.7; }
+  .phone__link:hover {
+    opacity: 1; }
 
 .phone__kod {
   color: #00b9fe;

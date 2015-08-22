@@ -50,6 +50,10 @@ $header-top-height: 41px;
 
 .phone__link {
 	text-decoration: none;
+	opacity: 0.7;
+	&:hover {
+		opacity: 1;
+	}
 }
 
 .phone__kod {
